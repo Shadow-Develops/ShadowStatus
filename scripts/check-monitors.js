@@ -684,10 +684,22 @@ async function checkPing(target, timeout = 10) {
 		const { stdout } = await execAsync(command, { timeout: (timeout + 2) * 1000 });
 		const responseTime = Date.now() - startTime;
 
+		const lossMatch = stdout.match(/(\d+)%\s*(?:packet\s*)?loss/i);
+		const packetLoss = lossMatch ? parseInt(lossMatch[1], 10) : null;
+
+		if (packetLoss === 100) {
+			return {
+				status: 'down',
+				responseTime,
+				message: 'Host unreachable (100% packet loss)'
+			};
+		}
+
 		let pingTime = null;
 		const patterns = [
 			/time[=<](\d+\.?\d*)\s*ms/i, // Most common: time=15ms, time=15.3 ms, time<1ms
 			/time[=<]\s*(\d+\.?\d*)\s*ms/i, // With space after =: time= 15 ms
+			/rtt\s+min\/avg\/max\/\S+\s*=\s*[\d.]+\/([\d.]+)/i, // Linux summary: rtt min/avg/max/mdev = 14.267/14.267/14.267/0.000 ms
 			/(\d+\.?\d*)\s*ms\s*$/im // Fallback: just "15.3 ms" at end of line
 		];
 		for (const pattern of patterns) {
@@ -698,10 +710,12 @@ async function checkPing(target, timeout = 10) {
 			}
 		}
 
+		const finalResponseTime = pingTime ?? Math.min(responseTime, timeout * 1000);
+
 		return {
 			status: 'operational',
-			responseTime: pingTime ?? responseTime,
-			message: `Ping OK (${pingTime ?? responseTime}ms)`
+			responseTime: finalResponseTime,
+			message: `Ping OK (${finalResponseTime}ms)`
 		};
 	} catch (error) {
 		const responseTime = Date.now() - startTime;
