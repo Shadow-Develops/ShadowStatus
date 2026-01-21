@@ -801,9 +801,16 @@
             "statusCode": 200,
             "timestamp": "2026-01-21T14:03:51.637Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-01-21T14:43:42.867Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
