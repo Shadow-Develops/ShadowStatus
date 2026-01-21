@@ -1,51 +1,105 @@
 {
 	"groups": [
 		{
-			"name": "Websites",
+			"name": "Primary Systems",
 			"defaultOpen": true,
-			"showGroupStatus": true,
+			"showGroupStatus": false,
 			"showGroupHistory": false,
 			"monitors": [
 				{
-					"name": "Shadow Devs",
-					"type": "http",
-					"target": "https://shadowdevs.com",
-					"expectedStatus": [200, 201, 204],
-					"showTarget": true,
-					"showHistory": true,
-					"inverse": false
+					"name": "Dedicated Server",
+					"type": "ping",
+					"target": "207.166.129.77",
+					"showTarget": false,
+					"showHistory": true
 				},
 				{
-					"name": "my api",
-					"description": "just a simple api to help services",
+					"name": "Main Website",
 					"type": "http",
-					"target": "https://api.agentbub.dev",
-					"expectedStatus": [404],
+					"target": "https://shadowdevs.com",
+					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": true,
-					"showHistory": true,
-					"inverse": false
+					"showHistory": true
+				},
+				{
+					"name": "Shadow API",
+					"type": "http",
+					"target": "https://api.shadowdevs.com",
+					"expectedStatus": [404],
+					"showTarget": false,
+					"showHistory": true
+				},
+				{
+					"name": "Shadow Systems",
+					"type": "http",
+					"target": "https://shadowsys.app",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"showHistory": true
 				}
 			]
 		},
 		{
-			"name": "Servers",
+			"name": "Secondary Systems",
 			"defaultOpen": false,
-			"showGroupStatus": false,
+			"showGroupStatus": true,
 			"showGroupHistory": true,
 			"monitors": [
 				{
-					"name": "Server Box",
-					"type": "ping",
-					"target": "207.166.129.77",
+					"name": "Documentation",
+					"type": "http",
+					"target": "https://docs.shadowdevs.com",
+					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": false,
-					"showHistory": true,
-					"inverse": false
+					"showHistory": false
 				},
 				{
-					"name": "syn main",
-					"type": "steam",
-					"target": "207.166.129.25:27015",
+					"name": "CDN",
+					"type": "http",
+					"target": "https://cdn.shadowdevs.com",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": false,
+					"showHistory": false
+				}
+			]
+		},
+		{
+			"name": "Hosted by Us",
+			"defaultOpen": false,
+			"showGroupStatus": true,
+			"showGroupHistory": false,
+			"monitors": [
+				{
+					"name": "agentbub.dev & zachhines.dev",
+					"type": "http",
+					"target": "https://agentbub.dev",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"showHistory": false
+				},
+				{
+					"name": "agentbub.dev API",
+					"type": "http",
+					"target": "https://api.agentbub.dev",
+					"expectedStatus": [404],
+					"showTarget": false,
 					"showHistory": true
+				},
+				{
+					"name": "Bacta Network Landing",
+					"type": "http",
+					"target": "https://bactanetwork.com",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"showHistory": false
+				},
+				{
+					"name": "Bacta Network Forums",
+					"type": "http",
+					"target": "https://forums.bactanetwork.com",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"showHistory": false
 				}
 			]
 		},
@@ -63,7 +117,7 @@
 					"showTarget": false,
 					"showHistory": false,
 					"applyToOverall": false,
-					"discordPingRole": "741437883788820491"
+					"notify": false
 				},
 				{
 					"name": "Discord",
@@ -71,7 +125,8 @@
 					"target": "https://discordstatus.com",
 					"showTarget": false,
 					"showHistory": false,
-					"applyToOverall": false
+					"applyToOverall": false,
+					"notify": false
 				},
 				{
 					"name": "GitHub",
@@ -79,17 +134,11 @@
 					"target": "https://www.githubstatus.com",
 					"showTarget": false,
 					"showHistory": false,
-					"applyToOverall": false
+					"applyToOverall": false,
+					"notify": false
 				}
 			]
 		}
 	],
-	"monitors": [
-		{
-			"name": "manual test",
-			"type": "manual",
-			"showHistory": true,
-			"notify": false
-		}
-	]
+	"monitors": []
 }
