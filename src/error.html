@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>%sveltekit.status% - %sveltekit.error.message%</title>
+		<meta property="og:site_name" content="Shadow Development" />
+		<meta property="og:title" content="%sveltekit.status% Server Error" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary" />
+		<style>
+			@import url(https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap);
+			:root {
+				--bg1: #002b42;
+				--bg2: #002b42;
+				--bg3: #519b95;
+				--text: #ffffff;
+				--gray: #999999;
+			}
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: var(--bg2);
+				background-position: top;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background: linear-gradient(122deg, var(--bg1) 0, var(--bg3) 86%);
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			body > div {
+				width: calc(50% - 8rem);
+				margin: 0 4rem;
+			}
+			* {
+				font-family: Arimo, sans-serif;
+				font-optical-sizing: auto;
+				font-weight: 500;
+				font-style: normal;
+				color: var(--text);
+			}
+			h1 {
+				font-size: 8rem;
+				font-weight: 700;
+				text-align: center;
+			}
+			p {
+				text-align: center;
+				font-size: 1.1rem;
+			}
+			span {
+				font-size: 0.9rem;
+				color: var(--gray);
+			}
+			.nomargin {
+				margin: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1 class="nomargin">%sveltekit.status%</h1>
+			<p class="nomargin"><span id="msg">%sveltekit.error.message%</span></p>
+		</div>
+		<div>
+			<p id="body">
+				An error occurred that caused the site to not function as expected or the site went down.
+				<br />
+				If this error persists, please contact site administrator.
+			</p>
+		</div>
+	</body>
+</html>
+<!-- Created by Shadow Development: https://shadowdevs.com/store/shadowstatus -->
+<!-- With their mouths the godless destroy their neighbors, but through knowledge the righteous escape. (Proverbs 11:9) -->

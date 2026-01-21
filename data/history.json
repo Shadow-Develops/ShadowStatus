@@ -1,0 +1,527 @@
+{
+  "Shadow Devs": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 280,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "major",
+            "responseTime": 154,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T19:45:32.522Z",
+            "incidentOverride": true
+          },
+          {
+            "status": "operational",
+            "responseTime": 149,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T19:59:41.947Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 149,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T21:17:22.780Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 125,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T23:30:04.861Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "major"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 130,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T02:21:51.745Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 125,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T03:23:42.448Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 161,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      }
+    }
+  },
+  "my api": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 152,
+            "statusCode": 404,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 259,
+            "statusCode": 404,
+            "timestamp": "2026-01-20T21:17:22.780Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 1202,
+            "statusCode": 404,
+            "timestamp": "2026-01-20T23:30:04.861Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 398,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T02:21:51.745Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 164,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T03:23:42.448Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 297,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 85,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T04:57:13.702Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "major",
+            "responseTime": 101,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T04:58:22.146Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 96,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T04:59:51.276Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 191,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T05:05:42.124Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "major",
+            "responseTime": 224,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T05:07:49.944Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 184,
+            "statusCode": 404,
+            "timestamp": "2026-01-21T05:09:36.577Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "major"
+      }
+    }
+  },
+  "Server Box": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 15,
+            "statusCode": null,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 16,
+            "statusCode": null,
+            "timestamp": "2026-01-20T21:17:22.780Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 15,
+            "statusCode": null,
+            "timestamp": "2026-01-20T23:30:04.861Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 15,
+            "statusCode": null,
+            "timestamp": "2026-01-21T02:21:51.745Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 15,
+            "statusCode": null,
+            "timestamp": "2026-01-21T03:23:42.448Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 49,
+            "statusCode": null,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      }
+    }
+  },
+  "Cloudflare": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "degraded",
+            "responseTime": 300,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 294,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T21:17:22.781Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 284,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T23:30:04.862Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "degraded"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "degraded",
+            "responseTime": 475,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T02:21:51.745Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 262,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T03:23:42.449Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 333,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "degraded"
+      }
+    }
+  },
+  "Discord": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 440,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 302,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T21:17:22.781Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 476,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T23:30:04.862Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 526,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T02:21:51.745Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 321,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T03:23:42.449Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 394,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      }
+    }
+  },
+  "GitHub": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 382,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 80,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T19:52:20.055Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 404,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T21:17:22.781Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 470,
+            "statusCode": 200,
+            "timestamp": "2026-01-20T23:30:04.862Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "degraded"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 549,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T02:21:51.746Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 376,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T03:23:42.449Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 405,
+            "statusCode": 200,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      }
+    }
+  },
+  "manual test": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "partial",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-20T19:42:12.154Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-20T19:42:33.480Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-20T21:17:22.781Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-20T23:30:04.862Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "partial"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-21T02:21:51.746Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-21T03:23:42.449Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": null,
+            "statusCode": null,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      }
+    }
+  },
+  "syn main": {
+    "days": {
+      "2026-01-20": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 18,
+            "statusCode": null,
+            "timestamp": "2026-01-20T19:40:23.545Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 17,
+            "statusCode": null,
+            "timestamp": "2026-01-20T21:17:22.780Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 17,
+            "statusCode": null,
+            "timestamp": "2026-01-20T23:30:04.862Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      },
+      "2026-01-21": {
+        "checks": [
+          {
+            "status": "operational",
+            "responseTime": 18,
+            "statusCode": null,
+            "timestamp": "2026-01-21T02:21:51.745Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 19,
+            "statusCode": null,
+            "timestamp": "2026-01-21T03:23:42.448Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 18,
+            "statusCode": null,
+            "timestamp": "2026-01-21T04:52:51.702Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "operational"
+      }
+    }
+  }
+}

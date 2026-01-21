@@ -1,0 +1,30 @@
+{
+	"name": "shadowstatus",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"format": "prettier --write .",
+		"lint": "prettier --check .",
+		"check-monitors": "node scripts/check-monitors.js"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.49.1",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@tailwindcss/forms": "^0.5.10",
+		"@tailwindcss/vite": "^4.1.17",
+		"daisyui": "^5.5.14",
+		"prettier": "^3.7.4",
+		"prettier-plugin-svelte": "^3.4.0",
+		"prettier-plugin-tailwindcss": "^0.7.2",
+		"svelte": "^5.45.6",
+		"tailwindcss": "^4.1.17",
+		"vite": "^7.2.6",
+		"vite-plugin-devtools-json": "^1.0.0"
+	}
+}

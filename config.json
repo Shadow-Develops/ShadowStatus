@@ -1,0 +1,98 @@
+{
+	"domain": "status.shadowdevs.com",
+	"majorOutageThreshold": 2,
+	"siteSettings": {
+		"siteName": "Shadow Status",
+		"siteDescription": "A simple status page to show all Shadow Development Services. Hosted on Github Pages for reliable 24/7 uptime!",
+		"metaColor": "#3b5998"
+	},
+	"github": {
+		"owner": "Shadow-Develops",
+		"repo": "ShadowStatus",
+		"issuesLabel": "incident",
+		"manualMonitorLabel": "manual",
+		"maintenanceLabel": "maintenance",
+		"announcementLabel": "announce"
+	},
+	"design": {
+		"useLogo": "/img/Banner.png",
+		"logoDimensions": {
+			"width": 300,
+			"height": 300
+		},
+		"showSiteName": true,
+		"showDescription": false,
+		"showOverallStatus": true,
+		"footer": {
+			"enabled": true,
+			"credits": true
+		},
+		"statusDot": {
+			"enabled": {
+				"group": false,
+				"monitor": true
+			},
+			"animation": {
+				"group": false,
+				"monitor": "ping"
+			}
+		},
+		"recentIncidents": {
+			"active": true,
+			"number": 5
+		},
+		"incident": {
+			"showCommentAuthor": false,
+			"showGithubLink": true
+		},
+		"announcement": {
+			"showIcon": true,
+			"showTitle": false,
+			"showCommentAuthor": false,
+			"showGithubLink": true
+		}
+	},
+	"overallStatusText": {
+		"operational": "All systems are running smoothly.",
+		"degraded": "Some systems are experiencing issues.",
+		"major": "We're experiencing a major outage.",
+		"maintenance": "Scheduled maintenance is in progress."
+	},
+	"statusLevels": {
+		"operational": {
+			"label": "Operational",
+			"color": "success",
+			"priority": 0
+		},
+		"degraded": {
+			"label": "Degraded Performance",
+			"color": "warning",
+			"priority": 1
+		},
+		"partial": {
+			"label": "Partial Outage",
+			"color": "warning",
+			"priority": 2
+		},
+		"major": {
+			"label": "Major Outage",
+			"color": "error",
+			"priority": 3
+		},
+		"maintenance": {
+			"label": "Under Maintenance",
+			"color": "info",
+			"priority": 4
+		}
+	},
+	"notifications": {
+		"defaultEnabled": true,
+		"numberOfDown": 1,
+		"discord": {
+			"enabled": true,
+			"defaultPingRole": "everyone",
+			"pingForReturn": false
+		},
+		"webhook": false
+	}
+}

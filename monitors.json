@@ -1,0 +1,95 @@
+{
+	"groups": [
+		{
+			"name": "Websites",
+			"defaultOpen": true,
+			"showGroupStatus": true,
+			"showGroupHistory": false,
+			"monitors": [
+				{
+					"name": "Shadow Devs",
+					"type": "http",
+					"target": "https://shadowdevs.com",
+					"expectedStatus": [200, 201, 204],
+					"showTarget": true,
+					"showHistory": true,
+					"inverse": false
+				},
+				{
+					"name": "my api",
+					"description": "just a simple api to help services",
+					"type": "http",
+					"target": "https://api.agentbub.dev",
+					"expectedStatus": [404],
+					"showTarget": true,
+					"showHistory": true,
+					"inverse": false
+				}
+			]
+		},
+		{
+			"name": "Servers",
+			"defaultOpen": false,
+			"showGroupStatus": false,
+			"showGroupHistory": true,
+			"monitors": [
+				{
+					"name": "Server Box",
+					"type": "ping",
+					"target": "207.166.129.77",
+					"showTarget": false,
+					"showHistory": true,
+					"inverse": false
+				},
+				{
+					"name": "syn main",
+					"type": "steam",
+					"target": "207.166.129.25:27015",
+					"showHistory": true
+				}
+			]
+		},
+		{
+			"name": "Third-Party Services",
+			"description": "Services that we rely on.",
+			"defaultOpen": false,
+			"showGroupStatus": true,
+			"showGroupHistory": false,
+			"monitors": [
+				{
+					"name": "Cloudflare",
+					"type": "statuspage",
+					"target": "https://www.cloudflarestatus.com",
+					"showTarget": false,
+					"showHistory": false,
+					"applyToOverall": false,
+					"discordPingRole": "741437883788820491"
+				},
+				{
+					"name": "Discord",
+					"type": "statuspage",
+					"target": "https://discordstatus.com",
+					"showTarget": false,
+					"showHistory": false,
+					"applyToOverall": false
+				},
+				{
+					"name": "GitHub",
+					"type": "statuspage",
+					"target": "https://www.githubstatus.com",
+					"showTarget": false,
+					"showHistory": false,
+					"applyToOverall": false
+				}
+			]
+		}
+	],
+	"monitors": [
+		{
+			"name": "manual test",
+			"type": "manual",
+			"showHistory": true,
+			"notify": false
+		}
+	]
+}
