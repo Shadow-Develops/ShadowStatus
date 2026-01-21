@@ -8,11 +8,11 @@
 			"monitors": [
 				{
 					"name": "Dedicated Server",
-					"type": "ping",
-					"target": "207.166.129.77",
+					"type": "tcp",
+					"target": "207.166.129.77:443",
 					"showTarget": false,
 					"showHistory": true,
-					"timeout": 15
+					"timeout": 15000
 				},
 				{
 					"name": "Main Website",

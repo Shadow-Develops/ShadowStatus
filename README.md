@@ -282,20 +282,20 @@ Example configuration showcasing all available monitor types:
 
 ### Monitor Options
 
-| Option           | Type    | Description                        |
-| ---------------- | ------- | ---------------------------------- |
-| `name`           | string  | Display name                       |
-| `type`           | string  | Monitor type (see above)           |
-| `target`         | string  | What to monitor                    |
-| `description`    | string  | Optional description               |
-| `showTarget`     | boolean | Show target URL publicly           |
-| `showHistory`    | boolean | Display 90-day history             |
-| `notify`         | boolean | Send notifications                 |
-| `inverse`        | boolean | Reverse logic (down = operational) |
-| `applyToOverall` | boolean | Include in overall status          |
-| `expectedStatus` | array   | HTTP status codes (http only)      |
-| `timeout`        | number  | Request timeout in ms (ping only)  |
-| `jsonPath`       | string  | Path to value (json only)          |
-| `expectedValue`  | any     | Expected value (json only)         |
-| `recordType`     | string  | DNS record type (dns only)         |
-| `expectedIp`     | string  | Expected IP (dns only)             |
+| Option           | Type    | Description                                 |
+| ---------------- | ------- | ------------------------------------------- |
+| `name`           | string  | Display name                                |
+| `type`           | string  | Monitor type (see above)                    |
+| `target`         | string  | What to monitor                             |
+| `description`    | string  | Optional description                        |
+| `showTarget`     | boolean | Show target URL publicly                    |
+| `showHistory`    | boolean | Display 90-day history                      |
+| `notify`         | boolean | Send notifications                          |
+| `inverse`        | boolean | Reverse logic (down = operational)          |
+| `applyToOverall` | boolean | Include in overall status                   |
+| `expectedStatus` | array   | HTTP status codes (http only)               |
+| `timeout`        | number  | Request timeout in ms (in seconds for ping) |
+| `jsonPath`       | string  | Path to value (json only)                   |
+| `expectedValue`  | any     | Expected value (json only)                  |
+| `recordType`     | string  | DNS record type (dns only)                  |
+| `expectedIp`     | string  | Expected IP (dns only)                      |
