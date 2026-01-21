@@ -736,6 +736,15 @@ async function checkPing(target, timeout = 10) {
 	} catch (error) {
 		const responseTime = Date.now() - startTime;
 
+		// Debug logging for ping errors
+		console.log(`  [PING DEBUG] Target: ${target}`);
+		console.log(`  [PING DEBUG] Command: ${command}`);
+		console.log(`  [PING DEBUG] ERROR: ${error.message}`);
+		console.log(`  [PING DEBUG] Error code: ${error.code}`);
+		console.log(`  [PING DEBUG] Stderr: ${error.stderr}`);
+		console.log(`  [PING DEBUG] Stdout: ${error.stdout}`);
+		console.log(`  [PING DEBUG] Elapsed time: ${responseTime}ms`);
+
 		return {
 			status: 'down',
 			responseTime,
