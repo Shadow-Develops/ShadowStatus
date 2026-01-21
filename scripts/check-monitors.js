@@ -663,7 +663,7 @@ function isValidTarget(target) {
 	return false;
 }
 
-async function checkPing(target, timeout = 5) {
+async function checkPing(target, timeout = 10) {
 	const startTime = Date.now();
 
 	if (!isValidTarget(target)) {
@@ -685,12 +685,17 @@ async function checkPing(target, timeout = 5) {
 		const responseTime = Date.now() - startTime;
 
 		let pingTime = null;
-		if (isWindows) {
-			const match = stdout.match(/time[=<](\d+)ms/i);
-			if (match) pingTime = parseInt(match[1], 10);
-		} else {
-			const match = stdout.match(/time=(\d+\.?\d*)\s*ms/i);
-			if (match) pingTime = parseFloat(match[1]);
+		const patterns = [
+			/time[=<](\d+\.?\d*)\s*ms/i, // Most common: time=15ms, time=15.3 ms, time<1ms
+			/time[=<]\s*(\d+\.?\d*)\s*ms/i, // With space after =: time= 15 ms
+			/(\d+\.?\d*)\s*ms\s*$/im // Fallback: just "15.3 ms" at end of line
+		];
+		for (const pattern of patterns) {
+			const match = stdout.match(pattern);
+			if (match) {
+				pingTime = parseFloat(match[1]);
+				break;
+			}
 		}
 
 		return {
