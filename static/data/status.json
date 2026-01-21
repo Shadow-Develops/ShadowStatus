@@ -17,7 +17,7 @@
           "showTarget": false,
           "showHistory": true,
           "timeout": 15,
-          "status": "degraded",
+          "status": "operational",
           "responseTime": 5016,
           "statusCode": null,
           "message": "Host unreachable",
@@ -559,16 +559,15 @@
             },
             {
               "day": "2026-01-21",
-              "status": "degraded",
+              "status": "operational",
               "checks": 4,
               "avgResponseTime": 3764.75,
               "statusCounts": {
-                "operational": 3,
-                "degraded": 1
+                "operational": 4
               }
             }
           ],
-          "uptime": 75,
+          "uptime": 100,
           "incidentStatus": null,
           "affectingIncidents": []
         },

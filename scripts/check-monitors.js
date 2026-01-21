@@ -1252,7 +1252,7 @@ async function checkMonitor(monitor, history, config, manualStatuses = {}) {
 			result = await checkHttp(monitor.target, monitor.expectedStatus ?? 200);
 			break;
 		case 'ping':
-			result = await checkPing(monitor.target);
+			result = await checkPing(monitor.target, monitor.timeout);
 			break;
 		case 'tcp': {
 			const [host, portStr] = (monitor.target ?? '').split(':');

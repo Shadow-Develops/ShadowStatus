@@ -234,7 +234,8 @@ Example configuration showcasing all available monitor types:
 					"name": "Gateway",
 					"type": "ping",
 					"target": "192.168.1.1",
-					"showHistory": true
+					"showHistory": true,
+					"timeout": 5
 				},
 				{
 					"name": "DNS Resolution",
@@ -293,7 +294,7 @@ Example configuration showcasing all available monitor types:
 | `inverse`        | boolean | Reverse logic (down = operational) |
 | `applyToOverall` | boolean | Include in overall status          |
 | `expectedStatus` | array   | HTTP status codes (http only)      |
-| `timeout`        | number  | Request timeout in ms              |
+| `timeout`        | number  | Request timeout in ms (ping only)  |
 | `jsonPath`       | string  | Path to value (json only)          |
 | `expectedValue`  | any     | Expected value (json only)         |
 | `recordType`     | string  | DNS record type (dns only)         |
