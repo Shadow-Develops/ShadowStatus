@@ -54,6 +54,10 @@ Set these as GitHub Secrets:
 
 ## Configuration
 
+### static/CNAME
+
+Make sure your custom domain is here, otherwise your Github Repo URL will be used.
+
 ### config.json
 
 ```json
