@@ -684,8 +684,15 @@ async function checkPing(target, timeout = 10) {
 		const { stdout } = await execAsync(command, { timeout: (timeout + 2) * 1000 });
 		const responseTime = Date.now() - startTime;
 
+		// Debug logging for ping output
+		console.log(`  [PING DEBUG] Target: ${target}`);
+		console.log(`  [PING DEBUG] Command: ${command}`);
+		console.log(`  [PING DEBUG] Raw stdout:\n${stdout}`);
+		console.log(`  [PING DEBUG] Elapsed time: ${responseTime}ms`);
+
 		const lossMatch = stdout.match(/(\d+)%\s*(?:packet\s*)?loss/i);
 		const packetLoss = lossMatch ? parseInt(lossMatch[1], 10) : null;
+		console.log(`  [PING DEBUG] Packet loss: ${packetLoss}%`);
 
 		if (packetLoss === 100) {
 			return {
@@ -696,21 +703,30 @@ async function checkPing(target, timeout = 10) {
 		}
 
 		let pingTime = null;
+		let matchedPattern = null;
 		const patterns = [
 			/time[=<](\d+\.?\d*)\s*ms/i, // Most common: time=15ms, time=15.3 ms, time<1ms
 			/time[=<]\s*(\d+\.?\d*)\s*ms/i, // With space after =: time= 15 ms
 			/rtt\s+min\/avg\/max\/\S+\s*=\s*[\d.]+\/([\d.]+)/i, // Linux summary: rtt min/avg/max/mdev = 14.267/14.267/14.267/0.000 ms
 			/(\d+\.?\d*)\s*ms\s*$/im // Fallback: just "15.3 ms" at end of line
 		];
-		for (const pattern of patterns) {
-			const match = stdout.match(pattern);
+		for (let i = 0; i < patterns.length; i++) {
+			const match = stdout.match(patterns[i]);
 			if (match) {
 				pingTime = parseFloat(match[1]);
+				matchedPattern = i;
+				console.log(`  [PING DEBUG] Matched pattern ${i}: ${patterns[i]}`);
+				console.log(`  [PING DEBUG] Extracted ping time: ${pingTime}ms`);
 				break;
 			}
 		}
 
+		if (pingTime === null) {
+			console.log(`  [PING DEBUG] No pattern matched! Using fallback.`);
+		}
+
 		const finalResponseTime = pingTime ?? Math.min(responseTime, timeout * 1000);
+		console.log(`  [PING DEBUG] Final response time: ${finalResponseTime}ms`);
 
 		return {
 			status: 'operational',
