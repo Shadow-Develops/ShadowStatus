@@ -133,7 +133,7 @@
 
 	async function loadStatusData() {
 		try {
-			const response = await fetch('/data/status.json');
+			const response = await fetch(`/data/status.json?t=${Date.now()}`);
 			if (!response.ok) {
 				throw new Error(`Failed to load status data: ${response.status}`);
 			}
