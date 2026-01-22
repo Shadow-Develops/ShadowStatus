@@ -299,3 +299,46 @@ Example configuration showcasing all available monitor types:
 | `expectedValue`  | any     | Expected value (json only)                  |
 | `recordType`     | string  | DNS record type (dns only)                  |
 | `expectedIp`     | string  | Expected IP (dns only)                      |
+
+## Monitor Check Frequency
+
+By default, the GitHub Actions workflow runs every **30 minutes**. This is because GitHub Actions scheduled workflows can be delayed during high load periods, making intervals shorter than 30 minutes unreliable.
+
+### Setting Up 5-Minute Checks with cron-job.org
+
+For more frequent monitoring, use a free external cron service like [cron-job.org](https://cron-job.org) to trigger the workflow via GitHub's API.
+
+#### 1. Create a GitHub Personal Access Token
+
+1. Go to **GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens**
+2. Click **Generate new token**
+3. Set **Repository access** to "Only select repositories" and choose your ShadowStatus repo
+4. Under **Permissions**, grant **Actions** read and write access
+5. Generate and copy the token
+
+#### 2. Configure cron-job.org
+
+1. Create a free account at [cron-job.org](https://cron-job.org)
+2. Create a new cron job with these settings:
+
+| Setting            | Value                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------ |
+| **URL**            | `https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/actions/workflows/monitor-checks.yml/dispatches` |
+| **Schedule**       | Every 5 minutes                                                                                        |
+| **Request Method** | POST                                                                                                   |
+
+3. Add these **Headers**:
+
+```
+Authorization: Bearer YOUR_GITHUB_TOKEN
+Accept: application/vnd.github+v3+json
+Content-Type: application/json
+```
+
+4. Set the **Request Body**:
+
+```json
+{ "ref": "main" }
+```
+
+The GitHub Actions workflow will continue running every 30 minutes as a fallback in case the external cron service fails
