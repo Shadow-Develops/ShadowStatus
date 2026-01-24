@@ -4826,6 +4826,13 @@
             "statusCode": 404,
             "timestamp": "2026-01-24T16:30:20.332Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 346,
+            "statusCode": 404,
+            "timestamp": "2026-01-24T17:32:13.448Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -7168,6 +7175,13 @@
             "responseTime": 455,
             "statusCode": 200,
             "timestamp": "2026-01-24T16:50:18.048Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-01-24T17:32:13.448Z",
             "incidentOverride": false
           }
         ],
