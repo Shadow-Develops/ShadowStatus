@@ -3986,9 +3986,16 @@
             "statusCode": 404,
             "timestamp": "2026-01-24T02:05:15.354Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 683,
+            "statusCode": null,
+            "timestamp": "2026-01-24T02:45:14.701Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
