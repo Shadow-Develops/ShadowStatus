@@ -6772,6 +6772,13 @@
             "statusCode": 200,
             "timestamp": "2026-01-27T14:10:19.879Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-01-27T15:00:27.670Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -7882,9 +7889,16 @@
             "statusCode": 200,
             "timestamp": "2026-01-27T14:40:38.666Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10003,
+            "statusCode": null,
+            "timestamp": "2026-01-27T15:00:27.670Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -9034,6 +9048,13 @@
             "statusCode": 404,
             "timestamp": "2026-01-27T14:50:21.857Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10003,
+            "statusCode": null,
+            "timestamp": "2026-01-27T15:00:27.670Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -10150,6 +10171,13 @@
             "responseTime": 418,
             "statusCode": 200,
             "timestamp": "2026-01-27T14:10:19.879Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-01-27T15:00:27.671Z",
             "incidentOverride": false
           }
         ],
