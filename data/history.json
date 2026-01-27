@@ -6828,6 +6828,13 @@
             "statusCode": 200,
             "timestamp": "2026-01-27T15:05:26.156Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 375,
+            "statusCode": 200,
+            "timestamp": "2026-01-27T16:05:29.863Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -7965,6 +7972,13 @@
             "responseTime": 412,
             "statusCode": 200,
             "timestamp": "2026-01-27T15:35:23.828Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-01-27T16:05:29.863Z",
             "incidentOverride": false
           }
         ],
@@ -9132,6 +9146,13 @@
             "statusCode": 404,
             "timestamp": "2026-01-27T15:05:26.156Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-01-27T16:05:29.863Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -10263,6 +10284,13 @@
             "statusCode": 200,
             "timestamp": "2026-01-27T15:05:26.156Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 435,
+            "statusCode": 200,
+            "timestamp": "2026-01-27T16:05:29.864Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -11373,9 +11401,16 @@
             "statusCode": 200,
             "timestamp": "2026-01-27T15:45:20.404Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-01-27T16:05:29.864Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
