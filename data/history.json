@@ -3344,6 +3344,13 @@
             "statusCode": 404,
             "timestamp": "2026-01-27T14:10:19.878Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-01-27T14:45:27.165Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -9006,9 +9013,16 @@
             "statusCode": 404,
             "timestamp": "2026-01-27T14:40:38.666Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-01-27T14:45:27.165Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
