@@ -13177,9 +13177,16 @@
             "statusCode": 200,
             "timestamp": "2026-01-27T00:00:19.656Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-01-27T00:55:24.229Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   }
