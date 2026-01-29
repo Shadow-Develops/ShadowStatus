@@ -9030,9 +9030,16 @@
             "statusCode": 200,
             "timestamp": "2026-01-29T14:40:20.870Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-01-29T15:00:31.753Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -12117,9 +12124,16 @@
             "statusCode": 404,
             "timestamp": "2026-01-29T14:40:20.870Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-01-29T15:00:31.753Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
