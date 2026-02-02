@@ -11524,9 +11524,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-02T14:40:18.833Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-02T15:25:24.234Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -13853,6 +13860,13 @@
             "responseTime": 298,
             "statusCode": 200,
             "timestamp": "2026-02-02T15:10:17.736Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-02T15:25:24.234Z",
             "incidentOverride": false
           }
         ],
