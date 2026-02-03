@@ -4838,9 +4838,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-03T14:40:18.081Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-03T15:15:29.131Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -10103,9 +10110,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-03T14:40:18.081Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-03T15:15:29.131Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -12522,9 +12536,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-03T14:40:18.081Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-03T15:15:29.131Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -20157,9 +20178,16 @@
             "statusCode": 404,
             "timestamp": "2026-02-03T14:40:18.082Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-02-03T15:15:29.132Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -29833,6 +29861,13 @@
             "statusCode": 200,
             "timestamp": "2026-02-03T14:10:20.441Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 568,
+            "statusCode": 200,
+            "timestamp": "2026-02-03T15:15:29.132Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -32104,6 +32139,13 @@
             "responseTime": 812,
             "statusCode": 200,
             "timestamp": "2026-02-03T14:10:20.441Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 476,
+            "statusCode": 200,
+            "timestamp": "2026-02-03T15:15:29.132Z",
             "incidentOverride": false
           }
         ],
