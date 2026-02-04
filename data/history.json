@@ -5226,6 +5226,13 @@
             "statusCode": 200,
             "timestamp": "2026-02-04T16:20:25.655Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-04T16:30:26.250Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -19074,6 +19081,13 @@
             "responseTime": 10003,
             "statusCode": null,
             "timestamp": "2026-02-04T16:25:23.261Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 318,
+            "statusCode": 200,
+            "timestamp": "2026-02-04T16:30:26.554Z",
             "incidentOverride": false
           }
         ],
