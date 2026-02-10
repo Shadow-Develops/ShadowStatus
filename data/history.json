@@ -15640,9 +15640,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-10T21:55:17.211Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-02-10T22:05:26.314Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
