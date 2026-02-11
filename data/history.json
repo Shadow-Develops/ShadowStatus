@@ -51770,9 +51770,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-11T14:40:20.904Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 524,
+            "statusCode": 200,
+            "timestamp": "2026-02-11T15:30:21.834Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   }
