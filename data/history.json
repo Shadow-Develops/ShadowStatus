@@ -55977,9 +55977,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-15T05:15:14.261Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-02-15T05:30:25.873Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
