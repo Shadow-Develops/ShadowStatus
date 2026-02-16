@@ -24593,6 +24593,13 @@
             "statusCode": null,
             "timestamp": "2026-02-16T15:06:38.058Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 196,
+            "statusCode": 200,
+            "timestamp": "2026-02-16T15:10:23.185Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -39458,9 +39465,16 @@
             "statusCode": 404,
             "timestamp": "2026-02-16T14:45:16.740Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-16T15:10:23.186Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
