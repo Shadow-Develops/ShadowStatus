@@ -9955,6 +9955,13 @@
             "statusCode": 200,
             "timestamp": "2026-02-17T18:00:22.386Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-02-17T18:15:25.515Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -41184,6 +41191,13 @@
             "responseTime": 386,
             "statusCode": 404,
             "timestamp": "2026-02-17T17:30:21.901Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-02-17T18:15:25.515Z",
             "incidentOverride": false
           }
         ],
