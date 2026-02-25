@@ -85209,9 +85209,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-25T16:35:29.843Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 603,
+            "statusCode": 200,
+            "timestamp": "2026-02-25T16:40:27.100Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   }
