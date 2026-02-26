@@ -67165,9 +67165,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-26T00:00:28.118Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-02-26T01:00:25.930Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
