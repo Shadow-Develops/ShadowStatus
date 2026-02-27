@@ -42044,9 +42044,16 @@
             "statusCode": 200,
             "timestamp": "2026-02-27T19:50:20.021Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-02-27T20:05:23.192Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
