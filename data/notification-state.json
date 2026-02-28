@@ -1,17 +1,17 @@
 {
   "Dedicated Server": {
-    "lastStatus": "operational",
-    "consecutiveDownCount": 0,
-    "notifiedDown": false
-  },
-  "Main Website": {
     "lastStatus": "degraded",
     "consecutiveDownCount": 1,
     "notifiedDown": false
   },
-  "Shadow API": {
+  "Main Website": {
     "lastStatus": "operational",
     "consecutiveDownCount": 0,
+    "notifiedDown": false
+  },
+  "Shadow API": {
+    "lastStatus": "degraded",
+    "consecutiveDownCount": 1,
     "notifiedDown": false
   },
   "Shadow Systems": {
@@ -30,13 +30,13 @@
     "notifiedDown": false
   },
   "agentbub.dev & zachhines.dev": {
-    "lastStatus": "degraded",
-    "consecutiveDownCount": 1,
+    "lastStatus": "operational",
+    "consecutiveDownCount": 0,
     "notifiedDown": false
   },
   "agentbub.dev API": {
-    "lastStatus": "degraded",
-    "consecutiveDownCount": 1,
+    "lastStatus": "operational",
+    "consecutiveDownCount": 0,
     "notifiedDown": false
   },
   "Bacta Network Landing": {
@@ -45,8 +45,8 @@
     "notifiedDown": false
   },
   "Bacta Network Forums": {
-    "lastStatus": "operational",
-    "consecutiveDownCount": 0,
+    "lastStatus": "degraded",
+    "consecutiveDownCount": 1,
     "notifiedDown": false
   },
   "Cloudflare": {
