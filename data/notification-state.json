@@ -1,22 +1,22 @@
 {
   "Dedicated Server": {
-    "lastStatus": "operational",
-    "consecutiveDownCount": 0,
-    "notifiedDown": false
-  },
-  "Main Website": {
     "lastStatus": "degraded",
     "consecutiveDownCount": 1,
     "notifiedDown": false
   },
-  "Shadow API": {
+  "Main Website": {
     "lastStatus": "operational",
     "consecutiveDownCount": 0,
+    "notifiedDown": false
+  },
+  "Shadow API": {
+    "lastStatus": "degraded",
+    "consecutiveDownCount": 1,
     "notifiedDown": false
   },
   "Shadow Systems": {
     "lastStatus": "degraded",
-    "consecutiveDownCount": 1,
+    "consecutiveDownCount": 2,
     "notifiedDown": false
   },
   "Documentation": {
@@ -25,8 +25,8 @@
     "notifiedDown": false
   },
   "CDN": {
-    "lastStatus": "operational",
-    "consecutiveDownCount": 0,
+    "lastStatus": "degraded",
+    "consecutiveDownCount": 1,
     "notifiedDown": false
   },
   "agentbub.dev & zachhines.dev": {
