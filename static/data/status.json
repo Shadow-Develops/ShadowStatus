@@ -46,9 +46,9 @@
           "showHistory": true,
           "timeout": 15000,
           "status": "operational",
-          "responseTime": 205,
+          "responseTime": 208,
           "statusCode": null,
-          "message": "TCP port 443 open (205ms)",
+          "message": "TCP port 443 open (208ms)",
           "incidentOverride": false,
           "history": [
             {
@@ -744,7 +744,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 213,
+          "responseTime": 159,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -1450,719 +1450,6 @@
           "affectingIncidents": []
         },
         {
-          "name": "Shadow API",
-          "type": "http",
-          "target": "https://api.shadowdevs.com",
-          "expectedStatus": [
-            404
-          ],
-          "showTarget": false,
-          "showHistory": true,
-          "status": "operational",
-          "responseTime": 187,
-          "statusCode": 404,
-          "message": "HTTP 404",
-          "incidentOverride": false,
-          "history": [
-            {
-              "day": "2025-12-03",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-04",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-05",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-06",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-07",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-08",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-09",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-10",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-12",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-13",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-14",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-15",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-16",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-17",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-18",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-19",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-20",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-21",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-22",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-23",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-24",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-25",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-26",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-27",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-28",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-29",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-30",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2025-12-31",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-01",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-02",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-03",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-04",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-05",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-06",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-07",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-08",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-09",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-10",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-12",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-13",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-14",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-15",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-16",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-17",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-18",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-19",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-20",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-01-21",
-              "status": "operational",
-              "checks": 15,
-              "avgResponseTime": 182.53333333333333,
-              "statusCounts": {
-                "operational": 15
-              }
-            },
-            {
-              "day": "2026-01-22",
-              "status": "operational",
-              "checks": 23,
-              "avgResponseTime": 193.7391304347826,
-              "statusCounts": {
-                "operational": 23
-              }
-            },
-            {
-              "day": "2026-01-23",
-              "status": "degraded",
-              "checks": 25,
-              "avgResponseTime": 584.08,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 1
-              }
-            },
-            {
-              "day": "2026-01-24",
-              "status": "operational",
-              "checks": 24,
-              "avgResponseTime": 184.875,
-              "statusCounts": {
-                "operational": 24
-              }
-            },
-            {
-              "day": "2026-01-25",
-              "status": "operational",
-              "checks": 24,
-              "avgResponseTime": 209.16666666666666,
-              "statusCounts": {
-                "operational": 24
-              }
-            },
-            {
-              "day": "2026-01-26",
-              "status": "degraded",
-              "checks": 26,
-              "avgResponseTime": 1331.1153846153845,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 2
-              }
-            },
-            {
-              "day": "2026-01-27",
-              "status": "degraded",
-              "checks": 34,
-              "avgResponseTime": 1924.6176470588234,
-              "statusCounts": {
-                "operational": 27,
-                "degraded": 7
-              }
-            },
-            {
-              "day": "2026-01-28",
-              "status": "degraded",
-              "checks": 24,
-              "avgResponseTime": 611.4583333333334,
-              "statusCounts": {
-                "operational": 23,
-                "degraded": 1
-              }
-            },
-            {
-              "day": "2026-01-29",
-              "status": "degraded",
-              "checks": 29,
-              "avgResponseTime": 1560.8620689655172,
-              "statusCounts": {
-                "operational": 25,
-                "degraded": 4
-              }
-            },
-            {
-              "day": "2026-01-30",
-              "status": "degraded",
-              "checks": 30,
-              "avgResponseTime": 1838.7666666666667,
-              "statusCounts": {
-                "operational": 25,
-                "degraded": 5
-              }
-            },
-            {
-              "day": "2026-01-31",
-              "status": "degraded",
-              "checks": 24,
-              "avgResponseTime": 619.2916666666666,
-              "statusCounts": {
-                "operational": 23,
-                "degraded": 1
-              }
-            },
-            {
-              "day": "2026-02-01",
-              "status": "degraded",
-              "checks": 28,
-              "avgResponseTime": 1302.7142857142858,
-              "statusCounts": {
-                "operational": 25,
-                "degraded": 3
-              }
-            },
-            {
-              "day": "2026-02-02",
-              "status": "degraded",
-              "checks": 37,
-              "avgResponseTime": 3176.054054054054,
-              "statusCounts": {
-                "degraded": 11,
-                "operational": 26
-              }
-            },
-            {
-              "day": "2026-02-03",
-              "status": "degraded",
-              "checks": 28,
-              "avgResponseTime": 1607.5357142857142,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 4
-              }
-            },
-            {
-              "day": "2026-02-04",
-              "status": "degraded",
-              "checks": 29,
-              "avgResponseTime": 1541.7931034482758,
-              "statusCounts": {
-                "operational": 25,
-                "degraded": 4
-              }
-            },
-            {
-              "day": "2026-02-05",
-              "status": "degraded",
-              "checks": 30,
-              "avgResponseTime": 1493.2666666666667,
-              "statusCounts": {
-                "operational": 26,
-                "degraded": 4
-              }
-            },
-            {
-              "day": "2026-02-06",
-              "status": "degraded",
-              "checks": 25,
-              "avgResponseTime": 614.28,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 1
-              }
-            },
-            {
-              "day": "2026-02-07",
-              "status": "operational",
-              "checks": 24,
-              "avgResponseTime": 216.16666666666666,
-              "statusCounts": {
-                "operational": 24
-              }
-            },
-            {
-              "day": "2026-02-08",
-              "status": "degraded",
-              "checks": 25,
-              "avgResponseTime": 583.36,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 1
-              }
-            },
-            {
-              "day": "2026-02-09",
-              "status": "operational",
-              "checks": 23,
-              "avgResponseTime": 211.8695652173913,
-              "statusCounts": {
-                "operational": 23
-              }
-            },
-            {
-              "day": "2026-02-10",
-              "status": "degraded",
-              "checks": 31,
-              "avgResponseTime": 1793.9032258064517,
-              "statusCounts": {
-                "operational": 26,
-                "degraded": 5
-              }
-            },
-            {
-              "day": "2026-02-11",
-              "status": "degraded",
-              "checks": 25,
-              "avgResponseTime": 204.72,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 1
-              }
-            },
-            {
-              "day": "2026-02-12",
-              "status": "degraded",
-              "checks": 26,
-              "avgResponseTime": 961.2692307692307,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 2
-              }
-            },
-            {
-              "day": "2026-02-13",
-              "status": "degraded",
-              "checks": 26,
-              "avgResponseTime": 987.2692307692307,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 2
-              }
-            },
-            {
-              "day": "2026-02-14",
-              "status": "operational",
-              "checks": 24,
-              "avgResponseTime": 195.91666666666666,
-              "statusCounts": {
-                "operational": 24
-              }
-            },
-            {
-              "day": "2026-02-15",
-              "status": "operational",
-              "checks": 23,
-              "avgResponseTime": 190.82608695652175,
-              "statusCounts": {
-                "operational": 23
-              }
-            },
-            {
-              "day": "2026-02-16",
-              "status": "degraded",
-              "checks": 25,
-              "avgResponseTime": 605.64,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 1
-              }
-            },
-            {
-              "day": "2026-02-17",
-              "status": "degraded",
-              "checks": 32,
-              "avgResponseTime": 2242.09375,
-              "statusCounts": {
-                "operational": 26,
-                "degraded": 6
-              }
-            },
-            {
-              "day": "2026-02-18",
-              "status": "degraded",
-              "checks": 26,
-              "avgResponseTime": 964.5384615384615,
-              "statusCounts": {
-                "operational": 24,
-                "degraded": 2
-              }
-            },
-            {
-              "day": "2026-02-19",
-              "status": "degraded",
-              "checks": 27,
-              "avgResponseTime": 933.1111111111111,
-              "statusCounts": {
-                "operational": 25,
-                "degraded": 2
-              }
-            },
-            {
-              "day": "2026-02-20",
-              "status": "operational",
-              "checks": 24,
-              "avgResponseTime": 195.5,
-              "statusCounts": {
-                "operational": 24
-              }
-            },
-            {
-              "day": "2026-02-21",
-              "status": "operational",
-              "checks": 24,
-              "avgResponseTime": 201.91666666666666,
-              "statusCounts": {
-                "operational": 24
-              }
-            },
-            {
-              "day": "2026-02-22",
-              "status": "operational",
-              "checks": 23,
-              "avgResponseTime": 226.91304347826087,
-              "statusCounts": {
-                "operational": 23
-              }
-            },
-            {
-              "day": "2026-02-23",
-              "status": "degraded",
-              "checks": 30,
-              "avgResponseTime": 1512.1,
-              "statusCounts": {
-                "operational": 25,
-                "degraded": 5
-              }
-            },
-            {
-              "day": "2026-02-24",
-              "status": "degraded",
-              "checks": 32,
-              "avgResponseTime": 2064.46875,
-              "statusCounts": {
-                "operational": 26,
-                "degraded": 6
-              }
-            },
-            {
-              "day": "2026-02-25",
-              "status": "degraded",
-              "checks": 28,
-              "avgResponseTime": 1241.1785714285713,
-              "statusCounts": {
-                "operational": 25,
-                "degraded": 3
-              }
-            },
-            {
-              "day": "2026-02-26",
-              "status": "degraded",
-              "checks": 30,
-              "avgResponseTime": 1193.9666666666667,
-              "statusCounts": {
-                "operational": 26,
-                "degraded": 4
-              }
-            },
-            {
-              "day": "2026-02-27",
-              "status": "operational",
-              "checks": 24,
-              "avgResponseTime": 186.04166666666666,
-              "statusCounts": {
-                "operational": 24
-              }
-            },
-            {
-              "day": "2026-02-28",
-              "status": "degraded",
-              "checks": 63,
-              "avgResponseTime": 4506.269841269841,
-              "statusCounts": {
-                "operational": 38,
-                "degraded": 25
-              }
-            },
-            {
-              "day": "2026-03-01",
-              "status": "degraded",
-              "checks": 40,
-              "avgResponseTime": 2923.175,
-              "statusCounts": {
-                "degraded": 11,
-                "operational": 29
-              }
-            },
-            {
-              "day": "2026-03-02",
-              "status": "major",
-              "checks": 27,
-              "avgResponseTime": 2743.259259259259,
-              "statusCounts": {
-                "operational": 20,
-                "degraded": 6,
-                "major": 1
-              }
-            }
-          ],
-          "uptime": 88.48,
-          "incidentStatus": null,
-          "affectingIncidents": []
-        },
-        {
           "name": "Shadow Systems",
           "type": "http",
           "target": "https://shadowsys.app",
@@ -2175,7 +1462,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 307,
+          "responseTime": 124,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3186,410 +2473,410 @@
         {
           "day": "2026-01-21",
           "status": "operational",
-          "checks": 30,
-          "avgResponseTime": 346.8333333333333,
+          "checks": 45,
+          "avgResponseTime": 292.06666666666666,
           "statusCounts": {
-            "operational": 30
+            "operational": 45
           }
         },
         {
           "day": "2026-01-22",
           "status": "degraded",
-          "checks": 51,
-          "avgResponseTime": 1269.862745098039,
+          "checks": 74,
+          "avgResponseTime": 935.3918918918919,
           "statusCounts": {
-            "operational": 46,
+            "operational": 69,
             "degraded": 5
           }
         },
         {
           "day": "2026-01-23",
           "status": "degraded",
-          "checks": 49,
-          "avgResponseTime": 680.795918367347,
+          "checks": 74,
+          "avgResponseTime": 648.1216216216217,
           "statusCounts": {
-            "operational": 47,
-            "degraded": 2
+            "operational": 71,
+            "degraded": 3
           }
         },
         {
           "day": "2026-01-24",
           "status": "operational",
-          "checks": 48,
-          "avgResponseTime": 296.3125,
+          "checks": 72,
+          "avgResponseTime": 259.1666666666667,
           "statusCounts": {
-            "operational": 48
+            "operational": 72
           }
         },
         {
           "day": "2026-01-25",
           "status": "operational",
-          "checks": 48,
-          "avgResponseTime": 275.9375,
+          "checks": 72,
+          "avgResponseTime": 253.68055555555554,
           "statusCounts": {
-            "operational": 48
+            "operational": 72
           }
         },
         {
           "day": "2026-01-26",
           "status": "degraded",
-          "checks": 52,
-          "avgResponseTime": 1048.7692307692307,
+          "checks": 78,
+          "avgResponseTime": 1142.8846153846155,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 4
+            "operational": 72,
+            "degraded": 6
           }
         },
         {
           "day": "2026-01-27",
           "status": "degraded",
-          "checks": 57,
-          "avgResponseTime": 1715.9649122807018,
+          "checks": 91,
+          "avgResponseTime": 1793.923076923077,
           "statusCounts": {
-            "operational": 49,
-            "degraded": 8
+            "operational": 76,
+            "degraded": 15
           }
         },
         {
           "day": "2026-01-28",
           "status": "degraded",
-          "checks": 48,
-          "avgResponseTime": 686.3958333333334,
+          "checks": 72,
+          "avgResponseTime": 661.4166666666666,
           "statusCounts": {
-            "operational": 46,
-            "degraded": 2
+            "operational": 69,
+            "degraded": 3
           }
         },
         {
           "day": "2026-01-29",
           "status": "degraded",
-          "checks": 58,
-          "avgResponseTime": 1503.9655172413793,
+          "checks": 87,
+          "avgResponseTime": 1522.9310344827586,
           "statusCounts": {
-            "operational": 51,
-            "degraded": 7
+            "operational": 76,
+            "degraded": 11
           }
         },
         {
           "day": "2026-01-30",
           "status": "degraded",
-          "checks": 53,
-          "avgResponseTime": 1176.0566037735848,
+          "checks": 83,
+          "avgResponseTime": 1415.5903614457832,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 5
+            "operational": 73,
+            "degraded": 10
           }
         },
         {
           "day": "2026-01-31",
           "status": "degraded",
-          "checks": 47,
-          "avgResponseTime": 487.6595744680851,
+          "checks": 71,
+          "avgResponseTime": 532.1549295774648,
           "statusCounts": {
-            "operational": 46,
-            "degraded": 1
+            "operational": 69,
+            "degraded": 2
           }
         },
         {
           "day": "2026-02-01",
           "status": "degraded",
-          "checks": 53,
-          "avgResponseTime": 865.3584905660377,
+          "checks": 81,
+          "avgResponseTime": 1016.5432098765432,
           "statusCounts": {
-            "operational": 49,
-            "degraded": 4
+            "operational": 74,
+            "degraded": 7
           }
         },
         {
           "day": "2026-02-02",
           "status": "degraded",
-          "checks": 69,
-          "avgResponseTime": 2860.7971014492755,
+          "checks": 106,
+          "avgResponseTime": 2970.8396226415093,
           "statusCounts": {
-            "operational": 51,
-            "degraded": 18
+            "operational": 77,
+            "degraded": 29
           }
         },
         {
           "day": "2026-02-03",
           "status": "degraded",
-          "checks": 58,
-          "avgResponseTime": 1624.051724137931,
+          "checks": 86,
+          "avgResponseTime": 1618.6744186046512,
           "statusCounts": {
-            "operational": 50,
-            "degraded": 8
+            "operational": 74,
+            "degraded": 12
           }
         },
         {
           "day": "2026-02-04",
           "status": "degraded",
-          "checks": 61,
-          "avgResponseTime": 1866.639344262295,
+          "checks": 90,
+          "avgResponseTime": 1761.9666666666667,
           "statusCounts": {
-            "operational": 51,
-            "degraded": 10
+            "operational": 76,
+            "degraded": 14
           }
         },
         {
           "day": "2026-02-05",
           "status": "degraded",
-          "checks": 57,
-          "avgResponseTime": 1642.8070175438597,
+          "checks": 87,
+          "avgResponseTime": 1591.2413793103449,
           "statusCounts": {
-            "operational": 49,
-            "degraded": 8
+            "operational": 75,
+            "degraded": 12
           }
         },
         {
           "day": "2026-02-06",
           "status": "degraded",
-          "checks": 50,
-          "avgResponseTime": 695.1,
+          "checks": 75,
+          "avgResponseTime": 668.16,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 2
+            "operational": 72,
+            "degraded": 3
           }
         },
         {
           "day": "2026-02-07",
           "status": "operational",
-          "checks": 48,
-          "avgResponseTime": 276.9375,
+          "checks": 72,
+          "avgResponseTime": 256.68055555555554,
           "statusCounts": {
-            "operational": 48
+            "operational": 72
           }
         },
         {
           "day": "2026-02-08",
           "status": "degraded",
-          "checks": 49,
-          "avgResponseTime": 462.0408163265306,
+          "checks": 74,
+          "avgResponseTime": 503.02702702702703,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 1
+            "operational": 72,
+            "degraded": 2
           }
         },
         {
           "day": "2026-02-09",
           "status": "degraded",
-          "checks": 50,
-          "avgResponseTime": 672.82,
+          "checks": 73,
+          "avgResponseTime": 527.5890410958904,
           "statusCounts": {
-            "operational": 48,
+            "operational": 71,
             "degraded": 2
           }
         },
         {
           "day": "2026-02-10",
           "status": "degraded",
-          "checks": 56,
-          "avgResponseTime": 1327.142857142857,
+          "checks": 87,
+          "avgResponseTime": 1493.4597701149426,
           "statusCounts": {
-            "operational": 50,
-            "degraded": 6
+            "operational": 76,
+            "degraded": 11
           }
         },
         {
           "day": "2026-02-11",
           "status": "degraded",
-          "checks": 50,
-          "avgResponseTime": 675.5,
+          "checks": 75,
+          "avgResponseTime": 518.5733333333334,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 2
+            "operational": 72,
+            "degraded": 3
           }
         },
         {
           "day": "2026-02-12",
           "status": "degraded",
-          "checks": 49,
-          "avgResponseTime": 686.8367346938776,
+          "checks": 75,
+          "avgResponseTime": 781.9733333333334,
           "statusCounts": {
-            "operational": 47,
-            "degraded": 2
+            "operational": 71,
+            "degraded": 4
           }
         },
         {
           "day": "2026-02-13",
           "status": "degraded",
-          "checks": 51,
-          "avgResponseTime": 838.3529411764706,
+          "checks": 77,
+          "avgResponseTime": 888.6363636363636,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 3
+            "operational": 72,
+            "degraded": 5
           }
         },
         {
           "day": "2026-02-14",
           "status": "operational",
-          "checks": 48,
-          "avgResponseTime": 263.3541666666667,
+          "checks": 72,
+          "avgResponseTime": 240.875,
           "statusCounts": {
-            "operational": 48
+            "operational": 72
           }
         },
         {
           "day": "2026-02-15",
           "status": "operational",
-          "checks": 46,
-          "avgResponseTime": 272.0217391304348,
+          "checks": 69,
+          "avgResponseTime": 244.95652173913044,
           "statusCounts": {
-            "operational": 46
+            "operational": 69
           }
         },
         {
           "day": "2026-02-16",
           "status": "degraded",
-          "checks": 51,
-          "avgResponseTime": 863.3725490196078,
+          "checks": 76,
+          "avgResponseTime": 778.5921052631579,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 3
+            "operational": 72,
+            "degraded": 4
           }
         },
         {
           "day": "2026-02-17",
           "status": "degraded",
-          "checks": 58,
-          "avgResponseTime": 1447.103448275862,
+          "checks": 90,
+          "avgResponseTime": 1729.7666666666667,
           "statusCounts": {
-            "operational": 50,
-            "degraded": 8
+            "operational": 76,
+            "degraded": 14
           }
         },
         {
           "day": "2026-02-18",
           "status": "degraded",
-          "checks": 51,
-          "avgResponseTime": 677.2156862745098,
+          "checks": 77,
+          "avgResponseTime": 774.2337662337662,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 3
+            "operational": 72,
+            "degraded": 5
           }
         },
         {
           "day": "2026-02-19",
           "status": "degraded",
-          "checks": 51,
-          "avgResponseTime": 1028,
+          "checks": 78,
+          "avgResponseTime": 995.1538461538462,
           "statusCounts": {
-            "operational": 48,
-            "degraded": 3
+            "operational": 73,
+            "degraded": 5
           }
         },
         {
           "day": "2026-02-20",
           "status": "degraded",
-          "checks": 49,
-          "avgResponseTime": 483.3673469387755,
+          "checks": 73,
+          "avgResponseTime": 388.7260273972603,
           "statusCounts": {
-            "operational": 48,
+            "operational": 72,
             "degraded": 1
           }
         },
         {
           "day": "2026-02-21",
           "status": "operational",
-          "checks": 48,
-          "avgResponseTime": 280.5,
+          "checks": 72,
+          "avgResponseTime": 254.30555555555554,
           "statusCounts": {
-            "operational": 48
+            "operational": 72
           }
         },
         {
           "day": "2026-02-22",
           "status": "operational",
-          "checks": 46,
-          "avgResponseTime": 307.5,
+          "checks": 69,
+          "avgResponseTime": 280.6376811594203,
           "statusCounts": {
-            "operational": 46
+            "operational": 69
           }
         },
         {
           "day": "2026-02-23",
           "status": "degraded",
-          "checks": 56,
-          "avgResponseTime": 1038.017857142857,
+          "checks": 86,
+          "avgResponseTime": 1203.3953488372092,
           "statusCounts": {
-            "operational": 49,
-            "degraded": 7
+            "operational": 74,
+            "degraded": 12
           }
         },
         {
           "day": "2026-02-24",
           "status": "degraded",
-          "checks": 58,
-          "avgResponseTime": 1642.551724137931,
+          "checks": 90,
+          "avgResponseTime": 1792.5666666666666,
           "statusCounts": {
-            "operational": 50,
-            "degraded": 8
+            "operational": 76,
+            "degraded": 14
           }
         },
         {
           "day": "2026-02-25",
           "status": "major",
-          "checks": 49,
-          "avgResponseTime": 2859.122448979592,
+          "checks": 77,
+          "avgResponseTime": 2270.779220779221,
           "statusCounts": {
-            "operational": 36,
-            "degraded": 3,
+            "operational": 61,
+            "degraded": 6,
             "major": 10
           }
         },
         {
           "day": "2026-02-26",
           "status": "major",
-          "checks": 54,
-          "avgResponseTime": 1350.3703703703704,
+          "checks": 84,
+          "avgResponseTime": 1294.5119047619048,
           "statusCounts": {
-            "operational": 47,
-            "degraded": 5,
+            "operational": 73,
+            "degraded": 9,
             "major": 2
           }
         },
         {
           "day": "2026-02-27",
           "status": "degraded",
-          "checks": 50,
-          "avgResponseTime": 652.94,
+          "checks": 74,
+          "avgResponseTime": 501.5135135135135,
           "statusCounts": {
-            "operational": 48,
+            "operational": 72,
             "degraded": 2
           }
         },
         {
           "day": "2026-02-28",
           "status": "degraded",
-          "checks": 77,
-          "avgResponseTime": 2980.87012987013,
+          "checks": 140,
+          "avgResponseTime": 3667.3,
           "statusCounts": {
-            "operational": 58,
-            "degraded": 19
+            "operational": 96,
+            "degraded": 44
           }
         },
         {
           "day": "2026-03-01",
           "status": "degraded",
-          "checks": 63,
-          "avgResponseTime": 1929.873015873016,
+          "checks": 103,
+          "avgResponseTime": 2315.621359223301,
           "statusCounts": {
-            "operational": 52,
-            "degraded": 11
+            "operational": 81,
+            "degraded": 22
           }
         },
         {
           "day": "2026-03-02",
           "status": "major",
-          "checks": 50,
-          "avgResponseTime": 2046.72,
+          "checks": 77,
+          "avgResponseTime": 2290.961038961039,
           "statusCounts": {
-            "operational": 40,
-            "degraded": 9,
-            "major": 1
+            "operational": 60,
+            "degraded": 15,
+            "major": 2
           }
         }
       ],
-      "uptime": 90.92,
+      "uptime": 90.07,
       "monitors": [
         {
           "name": "Documentation",
@@ -3601,10 +2888,10 @@
             401,
             303
           ],
-          "showTarget": false,
+          "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 231,
+          "responseTime": 316,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3621,12 +2908,32 @@
             401,
             303
           ],
+          "showTarget": true,
+          "showHistory": false,
+          "status": "operational",
+          "responseTime": 190,
+          "statusCode": 200,
+          "message": "HTTP 200",
+          "incidentOverride": false,
+          "incidentStatus": null,
+          "affectingIncidents": []
+        },
+        {
+          "name": "Shadow API",
+          "type": "http",
+          "target": "https://api.shadowdevs.com",
+          "expectedStatus": [
+            200,
+            404,
+            401,
+            303
+          ],
           "showTarget": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 232,
-          "statusCode": 200,
-          "message": "HTTP 200",
+          "responseTime": 226,
+          "statusCode": 404,
+          "message": "HTTP 404",
           "incidentOverride": false,
           "incidentStatus": null,
           "affectingIncidents": []
@@ -3652,9 +2959,10 @@
             303
           ],
           "showTarget": true,
+          "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 259,
+          "responseTime": 499,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3669,9 +2977,10 @@
             404
           ],
           "showTarget": false,
+          "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 329,
+          "responseTime": 289,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3689,9 +2998,10 @@
             303
           ],
           "showTarget": true,
+          "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 434,
+          "responseTime": 381,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3709,9 +3019,10 @@
             303
           ],
           "showTarget": true,
+          "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 876,
+          "responseTime": 644,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3738,7 +3049,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 550,
+          "responseTime": 679,
           "statusCode": 200,
           "message": "Minor Service Outage",
           "incidentOverride": false,
@@ -3754,7 +3065,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 561,
+          "responseTime": 605,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3770,7 +3081,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 585,
+          "responseTime": 692,
           "statusCode": 200,
           "message": "Minor Service Outage",
           "incidentOverride": false,
@@ -3809,5 +3120,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-02T20:15:23.771Z"
+  "lastUpdated": "2026-03-02T20:25:40.836Z"
 }
