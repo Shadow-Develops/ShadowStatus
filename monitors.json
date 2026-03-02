@@ -23,14 +23,6 @@
 					"showHistory": true
 				},
 				{
-					"name": "Shadow API",
-					"type": "http",
-					"target": "https://api.shadowdevs.com",
-					"expectedStatus": [404],
-					"showTarget": false,
-					"showHistory": true
-				},
-				{
 					"name": "Shadow Systems",
 					"type": "http",
 					"target": "https://shadowsys.app",
@@ -51,13 +43,21 @@
 					"type": "http",
 					"target": "https://docs.shadowdevs.com",
 					"expectedStatus": [200, 404, 401, 303],
-					"showTarget": false,
+					"showTarget": true,
 					"showHistory": false
 				},
 				{
 					"name": "CDN",
 					"type": "http",
 					"target": "https://cdn.shadowdevs.com",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"showHistory": false
+				},
+				{
+					"name": "Shadow API",
+					"type": "http",
+					"target": "https://api.shadowdevs.com",
 					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": false,
 					"showHistory": false
@@ -76,6 +76,7 @@
 					"target": "https://agentbub.dev",
 					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": true,
+					"applyToOverall": false,
 					"showHistory": false
 				},
 				{
@@ -84,6 +85,7 @@
 					"target": "https://api.agentbub.dev",
 					"expectedStatus": [404],
 					"showTarget": false,
+					"applyToOverall": false,
 					"showHistory": false
 				},
 				{
@@ -92,6 +94,7 @@
 					"target": "https://bactanetwork.com",
 					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": true,
+					"applyToOverall": false,
 					"showHistory": false
 				},
 				{
@@ -100,6 +103,7 @@
 					"target": "https://forums.bactanetwork.com",
 					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": true,
+					"applyToOverall": false,
 					"showHistory": false
 				}
 			]
