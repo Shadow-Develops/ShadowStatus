@@ -58289,9 +58289,16 @@
             "statusCode": 200,
             "timestamp": "2026-03-05T13:45:16.187Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-03-05T14:05:25.102Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
