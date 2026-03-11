@@ -16,7 +16,16 @@
       "updatedAt": "2026-02-26T03:11:13Z",
       "closedAt": "2026-02-26T02:21:47Z",
       "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/14",
-      "updates": []
+      "updates": [
+        {
+          "id": 3963701077,
+          "body": "I have found the issue causing the ratelimit problem, and have resolved it. All bot's are now back online and operating as normal!\nThe problem causing this issue will also be rectified so that it doesn't happen again! Again, I do apologize for any inconvenience.",
+          "createdAt": "2026-02-26T03:11:13Z",
+          "updatedAt": "2026-02-26T03:11:13Z",
+          "author": "AgentBUB",
+          "authorAvatar": "https://avatars.githubusercontent.com/u/46576969?v=4"
+        }
+      ]
     }
   ],
   "monitors": [],
@@ -37,17 +46,11 @@
           "showHistory": true,
           "timeout": 15000,
           "status": "operational",
-          "responseTime": 228,
+          "responseTime": 207,
           "statusCode": null,
-          "message": "TCP port 443 open (228ms)",
+          "message": "TCP port 443 open (207ms)",
           "incidentOverride": false,
           "history": [
-            {
-              "day": "2025-12-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
             {
               "day": "2025-12-12",
               "status": null,
@@ -745,9 +748,18 @@
                 "operational": 24,
                 "degraded": 1
               }
+            },
+            {
+              "day": "2026-03-11",
+              "status": "operational",
+              "checks": 1,
+              "avgResponseTime": 207,
+              "statusCounts": {
+                "operational": 1
+              }
             }
           ],
-          "uptime": 96.16,
+          "uptime": 96.17,
           "incidentStatus": null,
           "affectingIncidents": []
         },
@@ -769,12 +781,6 @@
           "message": "HTTP 200",
           "incidentOverride": false,
           "history": [
-            {
-              "day": "2025-12-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
             {
               "day": "2025-12-12",
               "status": null,
@@ -1491,9 +1497,18 @@
                 "operational": 25,
                 "degraded": 3
               }
+            },
+            {
+              "day": "2026-03-11",
+              "status": "operational",
+              "checks": 1,
+              "avgResponseTime": 286,
+              "statusCounts": {
+                "operational": 1
+              }
             }
           ],
-          "uptime": 88.47,
+          "uptime": 88.48,
           "incidentStatus": null,
           "affectingIncidents": []
         },
@@ -1510,17 +1525,11 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 225,
+          "responseTime": 287,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
           "history": [
-            {
-              "day": "2025-12-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
             {
               "day": "2025-12-12",
               "status": null,
@@ -2239,9 +2248,18 @@
                 "operational": 24,
                 "degraded": 1
               }
+            },
+            {
+              "day": "2026-03-11",
+              "status": "operational",
+              "checks": 1,
+              "avgResponseTime": 287,
+              "statusCounts": {
+                "operational": 1
+              }
             }
           ],
-          "uptime": 88.56,
+          "uptime": 88.57,
           "incidentStatus": null,
           "affectingIncidents": []
         }
@@ -2253,12 +2271,6 @@
       "showGroupStatus": true,
       "showGroupHistory": true,
       "history": [
-        {
-          "day": "2025-12-11",
-          "status": null,
-          "checks": 0,
-          "avgResponseTime": null
-        },
         {
           "day": "2025-12-12",
           "status": null,
@@ -2979,6 +2991,15 @@
             "operational": 74,
             "degraded": 8
           }
+        },
+        {
+          "day": "2026-03-11",
+          "status": "operational",
+          "checks": 3,
+          "avgResponseTime": 331.3333333333333,
+          "statusCounts": {
+            "operational": 3
+          }
         }
       ],
       "uptime": 91.12,
@@ -2996,7 +3017,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 257,
+          "responseTime": 278,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3016,7 +3037,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 293,
+          "responseTime": 357,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3036,7 +3057,7 @@
           "showTarget": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 389,
+          "responseTime": 359,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3067,7 +3088,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 425,
+          "responseTime": 441,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3085,7 +3106,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 509,
+          "responseTime": 432,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3106,7 +3127,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 428,
+          "responseTime": 448,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3127,7 +3148,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 734,
+          "responseTime": 1263,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3154,7 +3175,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 480,
+          "responseTime": 447,
           "statusCode": 200,
           "message": "Minor Service Outage",
           "incidentOverride": false,
@@ -3170,7 +3191,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 475,
+          "responseTime": 566,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3186,7 +3207,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 531,
+          "responseTime": 510,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3213,8 +3234,17 @@
       "updatedAt": "2026-03-02T20:13:40Z",
       "closedAt": null,
       "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/15",
-      "updates": []
+      "updates": [
+        {
+          "id": 3986674030,
+          "body": "Our provider is currently in the process of switching around their DDOS mitigators to improve/resolve the issue. We should hopefully see a correction in the issues soon! We apologize for the spotty connections recently and are working with our hosting provider to best combat it.  ",
+          "createdAt": "2026-03-02T20:13:40Z",
+          "updatedAt": "2026-03-02T20:13:40Z",
+          "author": "AgentBUB",
+          "authorAvatar": "https://avatars.githubusercontent.com/u/46576969?v=4"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-03-10T23:55:13.485Z"
+  "lastUpdated": "2026-03-11T00:00:19.935Z"
 }
