@@ -37990,9 +37990,16 @@
             "statusCode": 200,
             "timestamp": "2026-03-11T19:00:17.193Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 324,
+            "statusCode": null,
+            "timestamp": "2026-03-11T19:20:22.189Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
