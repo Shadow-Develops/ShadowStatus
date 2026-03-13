@@ -124924,9 +124924,16 @@
             "statusCode": 200,
             "timestamp": "2026-03-13T14:30:16.385Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 622,
+            "statusCode": 200,
+            "timestamp": "2026-03-13T15:15:18.568Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   }
