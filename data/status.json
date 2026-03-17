@@ -46,9 +46,9 @@
           "showHistory": true,
           "timeout": 15000,
           "status": "operational",
-          "responseTime": 203,
+          "responseTime": 218,
           "statusCode": null,
-          "message": "TCP port 443 open (203ms)",
+          "message": "TCP port 443 open (218ms)",
           "incidentOverride": false,
           "history": [
             {
@@ -797,7 +797,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 74,
+          "responseTime": 198,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -1567,7 +1567,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 92,
+          "responseTime": 214,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3082,10 +3082,10 @@
         {
           "day": "2026-03-17",
           "status": "degraded",
-          "checks": 57,
-          "avgResponseTime": 603.0175438596491,
+          "checks": 58,
+          "avgResponseTime": 595.3275862068965,
           "statusCounts": {
-            "operational": 53,
+            "operational": 54,
             "degraded": 4
           }
         }
@@ -3105,7 +3105,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 176,
+          "responseTime": 157,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3125,7 +3125,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 167,
+          "responseTime": 218,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3145,7 +3145,7 @@
           "showTarget": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 170,
+          "responseTime": 233,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3176,7 +3176,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 175,
+          "responseTime": 358,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3194,7 +3194,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 203,
+          "responseTime": 345,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3215,7 +3215,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 271,
+          "responseTime": 332,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3236,7 +3236,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 344,
+          "responseTime": 484,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3263,7 +3263,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 403,
+          "responseTime": 367,
           "statusCode": 200,
           "message": "Minor Service Outage",
           "incidentOverride": false,
@@ -3295,7 +3295,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 516,
+          "responseTime": 521,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3334,5 +3334,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-17T17:35:17.636Z"
+  "lastUpdated": "2026-03-17T17:40:15.692Z"
 }
