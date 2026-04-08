@@ -2,7 +2,7 @@
 
 A lightweight, static status page platform designed for GitHub Pages. Monitor your services, display incidents, and keep users informed - all without a database or backend server.
 
-[Get Shadow Status from Our Site](https://shadowdevs.com/store/shadowstatus) or [Releases Page](https://github.com/Shadow-Develops/ShadowStatus/releases)
+[Download Shadow Status from the Releases Page](https://github.com/Shadow-Develops/ShadowStatus/releases)
 
 _Created by [Shadow Development](https://shadowdevs.com)_
 
