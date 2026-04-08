@@ -8,7 +8,7 @@
 	import MonitorGroup from '$lib/components/MonitorGroup.svelte';
 	import Announcement from '$lib/components/Announcement.svelte';
 
-	const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes (matches action cron)
+	const REFRESH_INTERVAL = 16 * 60 * 1000; // 16 minutes (matches action cron of 15min + 1 minute buffer)
 
 	let incidents = $state([]);
 	let announcements = $state([]);
@@ -206,15 +206,152 @@
 			.slice(0, config.design?.recentIncidents?.number || 5)
 	);
 
+	let searchQuery = $state('');
+	let statusFilter = $state('all');
+	let groupFilter = $state('all');
+	let allGroupsOpen = $state(null); // null = uncontrolled, true = force open, false = force closed
+
+	const allGroupNames = $derived(monitorGroups.map((g) => g.name));
+
+	function monitorMatchesFilters(monitor, groupName = null) {
+		const effectiveStatus = monitor.incidentStatus || monitor.status;
+
+		if (statusFilter !== 'all' && effectiveStatus !== statusFilter) return false;
+		if (groupFilter !== 'all' && groupFilter !== (groupName ?? '__ungrouped__')) return false;
+
+		if (searchQuery.trim()) {
+			const q = searchQuery.trim().toLowerCase();
+			if (!monitor.name.toLowerCase().includes(q)) return false;
+		}
+
+		return true;
+	}
+
+	const filteredGroups = $derived(
+		monitorGroups
+			.map((group) => ({
+				...group,
+				monitors: group.monitors.filter((m) => monitorMatchesFilters(m, group.name))
+			}))
+			.filter((group) => {
+				if (groupFilter !== 'all' && groupFilter !== group.name) return false;
+				return group.monitors.length > 0;
+			})
+	);
+
+	const filteredMonitors = $derived(
+		monitors.filter((m) => monitorMatchesFilters(m, '__ungrouped__'))
+	);
+
+	const hasActiveFilters = $derived(
+		searchQuery.trim() !== '' || statusFilter !== 'all' || groupFilter !== 'all'
+	);
+
+	const statusFilterOptions = $derived(() => {
+		const statuses = new Set();
+		for (const group of monitorGroups) {
+			for (const m of group.monitors) statuses.add(m.incidentStatus || m.status);
+		}
+		for (const m of monitors) statuses.add(m.incidentStatus || m.status);
+		return [...statuses].filter(Boolean);
+	});
+
+	const monitorsCfg = $derived(config.design?.monitors ?? {});
+	const layoutMode = $derived(monitorsCfg.layout ?? 'default');
+	const gridColumns = $derived(monitorsCfg.gridColumns ?? 2);
+	const showFilterBar = $derived(monitorsCfg.showFilterBar ?? true);
+	const showSearch = $derived(monitorsCfg.showSearch ?? true);
+	const showStatusFilter = $derived(monitorsCfg.showStatusFilter ?? true);
+	const showGroupFilter = $derived(monitorsCfg.showGroupFilter ?? true);
+	const showCollapseButtons = $derived(monitorsCfg.showCollapseButtons ?? true);
+
+	const pageOrder = $derived(
+		config.design?.pageOrder ?? [
+			'overall-status',
+			'announcements',
+			'active-incidents',
+			'monitors',
+			'upcoming-maintenance',
+			'recent-incidents'
+		]
+	);
+
+	const showMonitorType = $derived(monitorsCfg.showMonitorType ?? true);
+	const showSSL = $derived(monitorsCfg.showSSL ?? true);
+
+	const pageMaxWidth = $derived(() => {
+		const widthSetting = config.design?.pageWidth ?? 'auto';
+		const widthMap = {
+			'3xl': 'max-w-3xl',
+			'4xl': 'max-w-4xl',
+			'5xl': 'max-w-5xl',
+			'6xl': 'max-w-6xl',
+			'7xl': 'max-w-7xl'
+		};
+		if (widthSetting !== 'auto' && widthMap[widthSetting]) {
+			return widthMap[widthSetting];
+		}
+		if (layoutMode !== 'grid') return 'max-w-3xl';
+		if (gridColumns <= 2) return 'max-w-3xl';
+		if (gridColumns === 3) return 'max-w-5xl';
+		if (gridColumns === 4) return 'max-w-6xl';
+		return 'max-w-7xl';
+	});
+
+	let retryDelay = $state(0);
+
+	async function loadStatusDataWithRetry() {
+		await loadStatusData();
+		if (error) {
+			retryDelay = retryDelay === 0 ? 30 : Math.min(retryDelay * 2, 300);
+		} else {
+			retryDelay = 0;
+		}
+	}
+
 	onMount(() => {
-		loadStatusData();
+		loadStatusDataWithRetry();
 
 		const countdownInterval = setInterval(() => {
-			nextRefreshIn = Math.max(0, nextRefreshIn - 1);
+			if (document.hidden) return;
+
+			const remaining = calculateNextRefresh();
+
+			if (remaining === null) return;
+
+			if (retryDelay > 0) {
+				retryDelay = Math.max(0, retryDelay - 1);
+				nextRefreshIn = retryDelay;
+				if (retryDelay === 0 && !isLoading) {
+					loadStatusDataWithRetry();
+				}
+				return;
+			}
+
+			nextRefreshIn = remaining;
+
+			if (remaining === 0 && !isLoading) {
+				loadStatusDataWithRetry();
+			}
 		}, 1000);
+
+		const handleVisibilityChange = () => {
+			if (!document.hidden) {
+				const remaining = calculateNextRefresh();
+				if (remaining !== null) {
+					nextRefreshIn = remaining;
+				}
+				if ((remaining === 0 || remaining === null) && !isLoading) {
+					loadStatusDataWithRetry();
+				}
+			}
+		};
+
+		document.addEventListener('visibilitychange', handleVisibilityChange);
 
 		return () => {
 			clearInterval(countdownInterval);
+			document.removeEventListener('visibilitychange', handleVisibilityChange);
 		};
 	});
 </script>
@@ -223,7 +360,7 @@
 	<title>{config.siteSettings.siteName}</title>
 </svelte:head>
 
-<div class="mx-auto max-w-3xl px-4 py-8">
+<div class="mx-auto px-4 py-8 {pageMaxWidth()}">
 	<header class="mb-8 text-center">
 		{#if config.design.useLogo && config.design.useLogo !== '' && config.design.useLogo !== null}
 			<img
@@ -243,6 +380,244 @@
 			<p class="mt-2 text-base-content/60">{config.siteSettings.siteDescription}</p>
 		{/if}
 	</header>
+
+	{#snippet overallStatusSection()}
+		{#if config.design.showOverallStatus}
+			<section class="mb-8">
+				<OverallStatus status={overallStatus} {config} />
+			</section>
+		{/if}
+	{/snippet}
+
+	{#snippet announcementsSection()}
+		{#if announcements.length > 0}
+			<section class="mb-8">
+				{#each announcements as announcement (announcement.id)}
+					<Announcement {announcement} {config} />
+				{/each}
+			</section>
+		{/if}
+	{/snippet}
+
+	{#snippet activeIncidentsSection()}
+		{#if activeIncidents.length > 0}
+			<section class="mb-8">
+				<h2 class="mb-4 text-lg font-semibold text-base-content">Active Incidents</h2>
+				<div class="space-y-3">
+					{#each activeIncidents as incident (incident.id)}
+						<IncidentCard {incident} {config} expanded={activeIncidents.length == 1} />
+					{/each}
+				</div>
+			</section>
+		{/if}
+	{/snippet}
+
+	{#snippet monitorsSection()}
+		{#if monitorGroups.length > 0 || monitors.length > 0}
+			<section class="mb-8">
+				<div class="mb-4 flex items-center justify-between">
+					<h2 class="text-lg font-semibold text-base-content">Monitors</h2>
+					{#if monitorGroups.length > 0 && layoutMode === 'default' && showCollapseButtons}
+						<div class="flex gap-1 text-xs">
+							<button
+								class="cursor-pointer rounded px-2 py-1 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+								onclick={() => {
+									allGroupsOpen = true;
+								}}>Expand all</button
+							>
+							<button
+								class="cursor-pointer rounded px-2 py-1 text-base-content/50 hover:bg-base-300 hover:text-base-content"
+								onclick={() => {
+									allGroupsOpen = false;
+								}}>Collapse all</button
+							>
+						</div>
+					{/if}
+				</div>
+
+				{#if showFilterBar}
+					<div class="mb-3 flex flex-wrap gap-2">
+						{#if showSearch}
+							<div class="relative flex-1" style="min-width: 160px;">
+								<svg
+									class="pointer-events-none absolute top-1/2 left-2.5 h-3.5 w-3.5 -translate-y-1/2 text-base-content/40"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+									/>
+								</svg>
+								<input
+									type="text"
+									placeholder="Search monitors..."
+									bind:value={searchQuery}
+									class="w-full rounded-lg border border-base-300 bg-base-200 py-1.5 pr-3 pl-8 text-sm text-base-content placeholder-base-content/40 focus:border-primary focus:outline-none"
+								/>
+							</div>
+						{/if}
+
+						{#if showStatusFilter}
+							<select
+								bind:value={statusFilter}
+								class="cursor-pointer rounded-lg border border-base-300 bg-base-200 px-2.5 py-1.5 text-sm text-base-content focus:border-primary focus:outline-none"
+							>
+								<option value="all">All statuses</option>
+								{#each statusFilterOptions() as s}
+									<option value={s}>{config.statusLevels[s]?.label ?? s}</option>
+								{/each}
+							</select>
+						{/if}
+
+						{#if showGroupFilter && allGroupNames.length > 0}
+							<select
+								bind:value={groupFilter}
+								class="cursor-pointer rounded-lg border border-base-300 bg-base-200 px-2.5 py-1.5 text-sm text-base-content focus:border-primary focus:outline-none"
+							>
+								<option value="all">All groups</option>
+								{#each allGroupNames as name}
+									<option value={name}>{name}</option>
+								{/each}
+								{#if monitors.length > 0}
+									<option value="__ungrouped__">Ungrouped</option>
+								{/if}
+							</select>
+						{/if}
+
+						{#if hasActiveFilters}
+							<button
+								class="rounded-lg border border-base-300 bg-base-200 px-2.5 py-1.5 text-sm text-base-content/50 hover:text-base-content"
+								onclick={() => {
+									searchQuery = '';
+									statusFilter = 'all';
+									groupFilter = 'all';
+								}}>Clear</button
+							>
+						{/if}
+					</div>
+				{/if}
+
+				{#if layoutMode === 'table'}
+					<div class="overflow-hidden rounded-lg border border-base-300">
+						<table class="w-full text-sm">
+							<thead class="bg-base-300">
+								<tr>
+									<th class="px-4 py-2 text-left font-medium text-base-content/70">Name</th>
+									<th class="px-4 py-2 text-left font-medium text-base-content/70">Status</th>
+									<th class="px-4 py-2 text-left font-medium text-base-content/70">Response Time</th
+									>
+									{#if showMonitorType}
+										<th class="px-4 py-2 text-left font-medium text-base-content/70">Type</th>
+									{/if}
+									{#if showSSL}
+										<th class="px-4 py-2 text-left font-medium text-base-content/70">SSL</th>
+									{/if}
+								</tr>
+							</thead>
+							<tbody class="bg-base-200">
+								{#each filteredGroups as group (group.name)}
+									{#if group.monitors.length > 0}
+										<tr class="bg-base-300/40">
+											<td
+												colspan={3 + (showMonitorType ? 1 : 0) + (showSSL ? 1 : 0)}
+												class="px-4 py-1.5 text-xs font-semibold text-base-content/60"
+												>{group.name}</td
+											>
+										</tr>
+										{#each group.monitors as monitor (monitor.name)}
+											<MonitorCard {monitor} {config} layout="table" {showMonitorType} {showSSL} />
+										{/each}
+									{/if}
+								{/each}
+								{#each filteredMonitors as monitor (monitor.name)}
+									<MonitorCard {monitor} {config} layout="table" {showMonitorType} {showSSL} />
+								{/each}
+							</tbody>
+						</table>
+						{#if filteredGroups.length === 0 && filteredMonitors.length === 0 && hasActiveFilters}
+							<p class="py-6 text-center text-sm text-base-content/50">
+								No monitors match your filters.
+							</p>
+						{/if}
+					</div>
+				{:else if layoutMode === 'grid'}
+					<div
+						class="grid gap-3"
+						style="grid-template-columns: repeat({gridColumns}, minmax(0, 1fr))"
+					>
+						{#each filteredGroups as group (group.name)}
+							{#if group.monitors.length > 0}
+								<div class="col-span-full pt-1 text-xs font-semibold text-base-content/60">
+									{group.name}
+								</div>
+								{#each group.monitors as monitor (monitor.name)}
+									<MonitorCard {monitor} {config} layout="grid" {showMonitorType} {showSSL} />
+								{/each}
+							{/if}
+						{/each}
+						{#each filteredMonitors as monitor (monitor.name)}
+							<MonitorCard {monitor} {config} layout="grid" {showMonitorType} {showSSL} />
+						{/each}
+						{#if filteredGroups.length === 0 && filteredMonitors.length === 0 && hasActiveFilters}
+							<p class="col-span-full py-6 text-center text-sm text-base-content/50">
+								No monitors match your filters.
+							</p>
+						{/if}
+					</div>
+				{:else}
+					<div class="space-y-3">
+						{#each filteredGroups as group (group.name)}
+							<MonitorGroup
+								{group}
+								{config}
+								defaultOpen={group.defaultOpen}
+								showGroupStatus={group.showGroupStatus}
+								forceOpen={allGroupsOpen}
+							/>
+						{/each}
+						{#each filteredMonitors as monitor (monitor.name)}
+							<MonitorCard {monitor} {config} />
+						{/each}
+						{#if filteredGroups.length === 0 && filteredMonitors.length === 0 && hasActiveFilters}
+							<p class="py-6 text-center text-sm text-base-content/50">
+								No monitors match your filters.
+							</p>
+						{/if}
+					</div>
+				{/if}
+			</section>
+		{/if}
+	{/snippet}
+
+	{#snippet upcomingMaintenanceSection()}
+		{#if upcomingMaintenance.length > 0}
+			<section class="mb-8">
+				<h2 class="mb-4 text-lg font-semibold text-base-content">Upcoming Maintenance</h2>
+				<div class="space-y-3">
+					{#each upcomingMaintenance as incident (incident.id)}
+						<IncidentCard {incident} {config} />
+					{/each}
+				</div>
+			</section>
+		{/if}
+	{/snippet}
+
+	{#snippet recentIncidentsSection()}
+		{#if config.design.recentIncidents.active && recentIncidents.length > 0}
+			<section class="mb-8">
+				<h2 class="mb-4 text-lg font-semibold text-base-content">Recent Incidents</h2>
+				<div class="space-y-3">
+					{#each recentIncidents as incident (incident.id)}
+						<IncidentCard {incident} {config} />
+					{/each}
+				</div>
+			</section>
+		{/if}
+	{/snippet}
 
 	{#if isLoading}
 		<div class="flex items-center justify-center py-12">
@@ -276,71 +651,19 @@
 			</div>
 		{/if}
 
-		{#if config.design.showOverallStatus}
-			<section class="mb-8">
-				<OverallStatus status={overallStatus} {config} />
-			</section>
-		{/if}
-
-		{#if announcements.length > 0}
-			<section class="mb-8">
-				{#each announcements as announcement (announcement.id)}
-					<Announcement {announcement} {config} />
-				{/each}
-			</section>
-		{/if}
-
-		{#if activeIncidents.length > 0}
-			<section class="mb-8">
-				<h2 class="mb-4 text-lg font-semibold text-base-content">Active Incidents</h2>
-				<div class="space-y-3">
-					{#each activeIncidents as incident (incident.id)}
-						<IncidentCard {incident} {config} expanded={activeIncidents.length == 1} />
-					{/each}
-				</div>
-			</section>
-		{/if}
-
-		{#if monitorGroups.length > 0 || monitors.length > 0}
-			<section class="mb-8">
-				<h2 class="mb-4 text-lg font-semibold text-base-content">Monitors</h2>
-				<div class="space-y-3">
-					{#each monitorGroups as group (group.name)}
-						<MonitorGroup
-							{group}
-							{config}
-							defaultOpen={group.defaultOpen}
-							showGroupStatus={group.showGroupStatus}
-						/>
-					{/each}
-					{#each monitors as monitor (monitor.name)}
-						<MonitorCard {monitor} {config} />
-					{/each}
-				</div>
-			</section>
-		{/if}
-
-		{#if upcomingMaintenance.length > 0}
-			<section class="mb-8">
-				<h2 class="mb-4 text-lg font-semibold text-base-content">Upcoming Maintenance</h2>
-				<div class="space-y-3">
-					{#each upcomingMaintenance as incident (incident.id)}
-						<IncidentCard {incident} {config} />
-					{/each}
-				</div>
-			</section>
-		{/if}
-
-		{#if config.design.recentIncidents.active && recentIncidents.length > 0}
-			<section class="mb-8">
-				<h2 class="mb-4 text-lg font-semibold text-base-content">Recent Incidents</h2>
-				<div class="space-y-3">
-					{#each recentIncidents as incident (incident.id)}
-						<IncidentCard {incident} {config} />
-					{/each}
-				</div>
-			</section>
-		{/if}
+		{#each pageOrder as sectionId (sectionId)}
+			{@const sectionSnippets = {
+				'overall-status': overallStatusSection,
+				announcements: announcementsSection,
+				'active-incidents': activeIncidentsSection,
+				monitors: monitorsSection,
+				'upcoming-maintenance': upcomingMaintenanceSection,
+				'recent-incidents': recentIncidentsSection
+			}}
+			{#if sectionSnippets[sectionId]}
+				{@render sectionSnippets[sectionId]()}
+			{/if}
+		{/each}
 
 		{#if incidents.length === 0 && monitors.length === 0 && monitorGroups.length === 0}
 			<section class="rounded-lg border border-base-300 bg-base-200 p-8 text-center">

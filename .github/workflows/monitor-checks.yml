@@ -2,8 +2,8 @@ name: Monitor Checks
 
 on:
   schedule:
-    # Run every 30 minutes, as a fallback for cron-job.org activation (every 5min)
-    - cron: '*/30 * * * *'
+    # Run every 45 minutes, as a fallback for cron-job.org activation (every 45min)
+    - cron: '*/45 * * * *'
   workflow_dispatch: # Allow manual trigger
 
 permissions:

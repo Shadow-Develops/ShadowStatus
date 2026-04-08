@@ -1,9 +1,10 @@
 <script>
+	import { untrack } from 'svelte';
 	import { getStatusDotClass, getStatusTextClass } from '$lib/client/status.js';
 	import MonitorCard from './MonitorCard.svelte';
 	import MonitorHistory from './MonitorHistory.svelte';
 
-	let { group, config, defaultOpen = true, showGroupStatus = true } = $props();
+	let { group, config, defaultOpen = true, showGroupStatus = true, forceOpen = null } = $props();
 
 	const showGroupHistory = $derived(group.showGroupHistory ?? false);
 	const hasGroupHistory = $derived(group.history && group.history.length > 0);
@@ -15,10 +16,12 @@
 		return;
 	});
 
-	let isOpen = $derived(defaultOpen);
+	let isOpenLocal = $state(untrack(() => defaultOpen));
+
+	const isOpen = $derived(forceOpen !== null ? forceOpen : isOpenLocal);
 
 	function toggleOpen() {
-		isOpen = !isOpen;
+		isOpenLocal = !isOpen;
 	}
 
 	const groupIncidentStatus = $derived(() => {

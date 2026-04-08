@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import { createConnection } from 'net';
+import tls from 'tls';
 import { promises as dns } from 'dns';
 import dgram from 'dgram';
 
@@ -994,6 +995,87 @@ async function checkJson(url, jsonPath, expectedValue, timeout = 10000) {
 	}
 }
 
+async function checkSsl(host, port = 443, warnDays = 14, criticalDays = 7, timeout = 10000) {
+	const startTime = Date.now();
+
+	if (!isValidTarget(host)) {
+		return {
+			status: 'down',
+			responseTime: 0,
+			daysRemaining: null,
+			message: 'Invalid host format'
+		};
+	}
+
+	return new Promise((resolve) => {
+		let resolved = false;
+
+		const timeoutHandle = setTimeout(() => {
+			if (!resolved) {
+				resolved = true;
+				socket.destroy();
+				resolve({
+					status: 'major',
+					responseTime: Date.now() - startTime,
+					daysRemaining: null,
+					message: 'Connection timeout'
+				});
+			}
+		}, timeout);
+
+		const socket = tls.connect({ host, port, rejectUnauthorized: false }, () => {
+			if (resolved) return;
+			resolved = true;
+			clearTimeout(timeoutHandle);
+
+			const responseTime = Date.now() - startTime;
+			const cert = socket.getPeerCertificate();
+			socket.destroy();
+
+			if (!cert || !cert.valid_to) {
+				return resolve({
+					status: 'major',
+					responseTime,
+					daysRemaining: null,
+					message: 'No certificate returned'
+				});
+			}
+
+			const expiry = new Date(cert.valid_to);
+			const daysRemaining = Math.floor((expiry - Date.now()) / 86400000);
+
+			let status, message;
+			if (daysRemaining <= 0) {
+				status = 'major';
+				message = `Certificate expired ${Math.abs(daysRemaining)} day${Math.abs(daysRemaining) !== 1 ? 's' : ''} ago`;
+			} else if (daysRemaining <= criticalDays) {
+				status = 'major';
+				message = `Expires in ${daysRemaining} day${daysRemaining !== 1 ? 's' : ''} — CRITICAL`;
+			} else if (daysRemaining <= warnDays) {
+				status = 'degraded';
+				message = `Expires in ${daysRemaining} days`;
+			} else {
+				status = 'operational';
+				message = `Valid for ${daysRemaining} days`;
+			}
+
+			resolve({ status, responseTime, daysRemaining, message });
+		});
+
+		socket.on('error', (err) => {
+			if (resolved) return;
+			resolved = true;
+			clearTimeout(timeoutHandle);
+			resolve({
+				status: 'major',
+				responseTime: Date.now() - startTime,
+				daysRemaining: null,
+				message: err.message
+			});
+		});
+	});
+}
+
 async function checkSteam(host, port = 27015, timeout = 5000) {
 	const startTime = Date.now();
 
@@ -1340,6 +1422,12 @@ async function checkMonitor(monitor, history, config, manualStatuses = {}) {
 			const [mcHost, mcPortStr] = (monitor.target ?? '').split(':');
 			const mcPort = parseInt(mcPortStr, 10) || monitor.port || 25565;
 			result = await checkMinecraft(mcHost, mcPort);
+			break;
+		}
+		case 'ssl': {
+			const [sslHost, sslPortStr] = (monitor.target ?? '').split(':');
+			const sslPort = parseInt(sslPortStr, 10) || monitor.port || 443;
+			result = await checkSsl(sslHost, sslPort, monitor.warnDays ?? 14, monitor.criticalDays ?? 7);
 			break;
 		}
 		case 'manual': {
@@ -1971,7 +2059,8 @@ async function main() {
 			responseTime: result?.responseTime ?? null,
 			statusCode: result?.statusCode ?? null,
 			message: result?.message ?? null,
-			incidentOverride: result?.incidentOverride ?? false
+			incidentOverride: result?.incidentOverride ?? false,
+			daysRemaining: result?.daysRemaining ?? null
 		};
 
 		if (monitor.showHistory) {
@@ -1994,7 +2083,8 @@ async function main() {
 				responseTime: result?.responseTime ?? null,
 				statusCode: result?.statusCode ?? null,
 				message: result?.message ?? null,
-				incidentOverride: result?.incidentOverride ?? false
+				incidentOverride: result?.incidentOverride ?? false,
+				daysRemaining: result?.daysRemaining ?? null
 			};
 
 			if (monitor.showHistory) {

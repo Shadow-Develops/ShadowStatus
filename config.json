@@ -15,6 +15,7 @@
 		"announcementLabel": "announce"
 	},
 	"design": {
+		"pageWidth": "4xl",
 		"useLogo": "/img/Banner.png",
 		"logoDimensions": {
 			"width": 300,
@@ -50,7 +51,31 @@
 			"showTitle": false,
 			"showCommentAuthor": false,
 			"showGithubLink": true
-		}
+		},
+		"historyGraph": {
+			"defaultTab": "status",
+			"showStatusTab": true,
+			"showResponseTimeTab": true
+		},
+		"monitors": {
+			"layout": "default",
+			"gridColumns": 3,
+			"showFilterBar": true,
+			"showSearch": true,
+			"showStatusFilter": true,
+			"showGroupFilter": true,
+			"showCollapseButtons": true,
+			"showMonitorType": false,
+			"showSSL": false
+		},
+		"pageOrder": [
+			"overall-status",
+			"announcements",
+			"active-incidents",
+			"monitors",
+			"upcoming-maintenance",
+			"recent-incidents"
+		]
 	},
 	"overallStatusText": {
 		"operational": "All systems are running smoothly.",

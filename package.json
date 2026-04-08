@@ -1,8 +1,10 @@
 {
 	"name": "shadowstatus",
 	"private": true,
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"type": "module",
+	"license": "MIT",
+	"author": "https://shadowdevs.com",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -10,7 +12,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"check-monitors": "node scripts/check-monitors.js"
+		"check-monitors": "node scripts/check-monitors.js",
+		"update-incidents": "node scripts/update-incidents.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
