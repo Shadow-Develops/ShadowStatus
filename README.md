@@ -6,6 +6,11 @@ A lightweight, static status page platform designed for GitHub Pages. Monitor yo
 
 _Created by [Shadow Development](https://shadowdevs.com)_
 
+<img width="1920" height="982" alt="1" src="https://github.com/user-attachments/assets/82398447-ba18-4724-ba76-7720519b638d" />
+<img width="1920" height="982" alt="3" src="https://github.com/user-attachments/assets/62773e44-4fca-4c4f-bc7a-e9df28ed057b" />
+<img width="1920" height="982" alt="2" src="https://github.com/user-attachments/assets/9948b341-cda0-43cf-80d7-4a44a9766674" />
+<img width="1920" height="982" alt="4" src="https://github.com/user-attachments/assets/943b161f-7ea3-48d4-8d6b-d7004b1644a2" />
+
 ## Features
 
 - 10 monitor types (HTTP, TCP, Ping, DNS, SSL/TLS, Steam, Minecraft, and more)
