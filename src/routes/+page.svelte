@@ -19,6 +19,7 @@
 	let isLoading = $state(true);
 	let error = $state(null);
 	let nextRefreshIn = $state(0);
+	let lastFetchedAt = $state(null);
 
 	function formatTime(seconds) {
 		const mins = Math.floor(seconds / 60);
@@ -27,16 +28,9 @@
 	}
 
 	function calculateNextRefresh() {
-		if (!lastUpdated) {
-			return null;
-		}
-		const lastUpdate = new Date(lastUpdated).getTime();
-		if (isNaN(lastUpdate)) {
-			return null;
-		}
-		const nextUpdate = lastUpdate + REFRESH_INTERVAL;
-		const now = Date.now();
-		const remaining = Math.max(0, Math.ceil((nextUpdate - now) / 1000));
+		if (!lastFetchedAt) return null;
+		const nextUpdate = lastFetchedAt + REFRESH_INTERVAL;
+		const remaining = Math.max(0, Math.ceil((nextUpdate - Date.now()) / 1000));
 		return remaining;
 	}
 
@@ -153,6 +147,7 @@
 				incidents
 			);
 			lastUpdated = data.lastUpdated ?? null;
+			lastFetchedAt = Date.now();
 			nextRefreshIn = calculateNextRefresh();
 
 			isLoading = false;
