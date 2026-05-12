@@ -46,9 +46,9 @@
           "showHistory": true,
           "timeout": 15000,
           "status": "operational",
-          "responseTime": 15,
+          "responseTime": 63,
           "statusCode": null,
-          "message": "TCP port 443 open (15ms)",
+          "message": "TCP port 443 open (63ms)",
           "incidentOverride": false,
           "daysRemaining": null,
           "history": [
@@ -871,10 +871,10 @@
             {
               "day": "2026-05-12",
               "status": "operational",
-              "checks": 15,
-              "avgResponseTime": 41.8,
+              "checks": 16,
+              "avgResponseTime": 43.125,
               "statusCounts": {
-                "operational": 15
+                "operational": 16
               }
             }
           ],
@@ -895,7 +895,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 137,
+          "responseTime": 202,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -1738,10 +1738,10 @@
             {
               "day": "2026-05-12",
               "status": "operational",
-              "checks": 15,
-              "avgResponseTime": 211.66666666666666,
+              "checks": 16,
+              "avgResponseTime": 211.0625,
               "statusCounts": {
-                "operational": 15
+                "operational": 16
               }
             }
           ],
@@ -1762,7 +1762,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 122,
+          "responseTime": 265,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -2605,14 +2605,14 @@
             {
               "day": "2026-05-12",
               "status": "operational",
-              "checks": 15,
-              "avgResponseTime": 221.33333333333334,
+              "checks": 16,
+              "avgResponseTime": 224.0625,
               "statusCounts": {
-                "operational": 15
+                "operational": 16
               }
             }
           ],
-          "uptime": 95.02,
+          "uptime": 95.03,
           "incidentStatus": null,
           "affectingIncidents": []
         }
@@ -3472,10 +3472,10 @@
         {
           "day": "2026-05-12",
           "status": "operational",
-          "checks": 45,
-          "avgResponseTime": 262.26666666666665,
+          "checks": 48,
+          "avgResponseTime": 260.7708333333333,
           "statusCounts": {
-            "operational": 45
+            "operational": 48
           }
         }
       ],
@@ -3494,7 +3494,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 237,
+          "responseTime": 187,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3515,7 +3515,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 191,
+          "responseTime": 268,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3536,7 +3536,7 @@
           "showTarget": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 174,
+          "responseTime": 260,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3568,7 +3568,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 245,
+          "responseTime": 307,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3587,7 +3587,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 316,
+          "responseTime": 291,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3609,7 +3609,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 336,
+          "responseTime": 314,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3631,7 +3631,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 567,
+          "responseTime": 493,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3659,7 +3659,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 535,
+          "responseTime": 200,
           "statusCode": 200,
           "message": "Minor Service Outage",
           "incidentOverride": false,
@@ -3676,7 +3676,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 631,
+          "responseTime": 264,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3693,7 +3693,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 688,
+          "responseTime": 258,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3705,5 +3705,5 @@
     }
   ],
   "announcements": [],
-  "lastUpdated": "2026-05-12T16:30:26.846Z"
+  "lastUpdated": "2026-05-12T16:45:21.053Z"
 }
