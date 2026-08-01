@@ -42439,9 +42439,16 @@
             "statusCode": 404,
             "timestamp": "2026-08-01T06:00:25.461Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10002,
+            "statusCode": null,
+            "timestamp": "2026-08-01T06:45:36.304Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
