@@ -157173,9 +157173,16 @@
             "statusCode": 200,
             "timestamp": "2026-08-03T12:00:23.265Z",
             "incidentOverride": false
+          },
+          {
+            "status": "major",
+            "responseTime": 395,
+            "statusCode": 405,
+            "timestamp": "2026-08-03T12:30:23.945Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "degraded"
+        "worstStatus": "major"
       }
     }
   },
@@ -172381,9 +172388,16 @@
             "statusCode": 200,
             "timestamp": "2026-08-03T12:00:23.265Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 368,
+            "statusCode": 405,
+            "timestamp": "2026-08-03T12:30:23.945Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -187805,6 +187819,13 @@
             "responseTime": 705,
             "statusCode": 200,
             "timestamp": "2026-08-03T11:30:19.624Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 452,
+            "statusCode": 405,
+            "timestamp": "2026-08-03T12:30:23.945Z",
             "incidentOverride": false
           }
         ],
