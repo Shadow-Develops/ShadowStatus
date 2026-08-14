@@ -105,6 +105,15 @@
 					"showTarget": true,
 					"applyToOverall": false,
 					"showHistory": false
+				},
+				{
+					"name": "Minorikyun ASMR Archive",
+					"type": "http",
+					"target": "https://asmr.minorikyun.cc",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"applyToOverall": false,
+					"showHistory": false
 				}
 			]
 		},
