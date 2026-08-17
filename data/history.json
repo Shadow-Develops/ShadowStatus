@@ -56688,9 +56688,16 @@
             "statusCode": 200,
             "timestamp": "2026-08-17T07:45:21.394Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-08-17T08:30:35.739Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -99197,9 +99204,16 @@
             "statusCode": 200,
             "timestamp": "2026-08-17T07:45:21.394Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-08-17T08:30:35.739Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
