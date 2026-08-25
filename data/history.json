@@ -172108,9 +172108,16 @@
             "statusCode": 200,
             "timestamp": "2026-08-25T04:45:20.374Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 197,
+            "statusCode": 405,
+            "timestamp": "2026-08-25T05:00:27.155Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -187568,9 +187575,16 @@
             "statusCode": 200,
             "timestamp": "2026-08-25T04:45:20.374Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 208,
+            "statusCode": 405,
+            "timestamp": "2026-08-25T05:00:27.155Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
