@@ -187428,9 +187428,16 @@
             "statusCode": 200,
             "timestamp": "2026-09-03T14:15:23.763Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 513,
+            "statusCode": 200,
+            "timestamp": "2026-09-03T14:30:55.054Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
