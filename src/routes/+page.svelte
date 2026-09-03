@@ -8,7 +8,8 @@
 	import MonitorGroup from '$lib/components/MonitorGroup.svelte';
 	import Announcement from '$lib/components/Announcement.svelte';
 
-	const REFRESH_INTERVAL = 16 * 60 * 1000; // 16 minutes (matches action cron of 15min + 1 minute buffer)
+	const REFRESH_INTERVAL = 15 * 60 * 1000;
+	const STALE_RETRY_INTERVAL = 30 * 1000;
 
 	let incidents = $state([]);
 	let announcements = $state([]);
@@ -19,7 +20,8 @@
 	let isLoading = $state(true);
 	let error = $state(null);
 	let nextRefreshIn = $state(0);
-	let lastFetchedAt = $state(null);
+	let nextRefreshAt = $state(null);
+	let isFetching = $state(false);
 
 	function formatTime(seconds) {
 		const mins = Math.floor(seconds / 60);
@@ -28,10 +30,23 @@
 	}
 
 	function calculateNextRefresh() {
-		if (!lastFetchedAt) return null;
-		const nextUpdate = lastFetchedAt + REFRESH_INTERVAL;
-		const remaining = Math.max(0, Math.ceil((nextUpdate - Date.now()) / 1000));
+		if (!nextRefreshAt) return null;
+		const remaining = Math.max(0, Math.ceil((nextRefreshAt - Date.now()) / 1000));
 		return remaining;
+	}
+
+	function scheduleNextRefresh(payloadLastUpdated) {
+		const now = Date.now();
+		const lastUpdateTime = new Date(payloadLastUpdated).getTime();
+
+		if (payloadLastUpdated && !Number.isNaN(lastUpdateTime)) {
+			const payloadDeadline = lastUpdateTime + REFRESH_INTERVAL;
+			nextRefreshAt = payloadDeadline > now ? payloadDeadline : now + STALE_RETRY_INTERVAL;
+		} else {
+			nextRefreshAt = now + REFRESH_INTERVAL;
+		}
+
+		nextRefreshIn = calculateNextRefresh();
 	}
 
 	function getIncidentState(incident) {
@@ -126,6 +141,9 @@
 	}
 
 	async function loadStatusData() {
+		if (isFetching) return false;
+		isFetching = true;
+
 		try {
 			const response = await fetch(`/data/status.json?t=${Date.now()}`);
 			if (!response.ok) {
@@ -147,14 +165,17 @@
 				incidents
 			);
 			lastUpdated = data.lastUpdated ?? null;
-			lastFetchedAt = Date.now();
-			nextRefreshIn = calculateNextRefresh();
+			scheduleNextRefresh(lastUpdated);
 
-			isLoading = false;
+			error = null;
+			return true;
 		} catch (e) {
 			console.error('Failed to load status data:', e);
 			error = 'Failed to load status data. Please try again later.';
+			return false;
+		} finally {
 			isLoading = false;
+			isFetching = false;
 		}
 	}
 
@@ -296,9 +317,11 @@
 	let retryDelay = $state(0);
 
 	async function loadStatusDataWithRetry() {
-		await loadStatusData();
-		if (error) {
+		const succeeded = await loadStatusData();
+		if (!succeeded) {
 			retryDelay = retryDelay === 0 ? 30 : Math.min(retryDelay * 2, 300);
+			nextRefreshAt = Date.now() + retryDelay * 1000;
+			nextRefreshIn = calculateNextRefresh();
 		} else {
 			retryDelay = 0;
 		}
@@ -314,18 +337,9 @@
 
 			if (remaining === null) return;
 
-			if (retryDelay > 0) {
-				retryDelay = Math.max(0, retryDelay - 1);
-				nextRefreshIn = retryDelay;
-				if (retryDelay === 0 && !isLoading) {
-					loadStatusDataWithRetry();
-				}
-				return;
-			}
-
 			nextRefreshIn = remaining;
 
-			if (remaining === 0 && !isLoading) {
+			if (remaining === 0 && !isFetching) {
 				loadStatusDataWithRetry();
 			}
 		}, 1000);
@@ -336,7 +350,7 @@
 				if (remaining !== null) {
 					nextRefreshIn = remaining;
 				}
-				if ((remaining === 0 || remaining === null) && !isLoading) {
+				if ((remaining === 0 || remaining === null) && !isFetching) {
 					loadStatusDataWithRetry();
 				}
 			}

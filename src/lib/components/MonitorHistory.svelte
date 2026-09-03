@@ -198,7 +198,7 @@
 	{/if}
 
 	{#if activeTab === 'status' && showStatusTab}
-		<div class="flex min-w-0 gap-px overflow-hidden">
+		<div class="flex min-w-0 gap-px">
 			{#each days() as day (day.day)}
 				{@const segments = getStatusSegments(day)}
 				<div class="group relative min-w-0 flex-1">
