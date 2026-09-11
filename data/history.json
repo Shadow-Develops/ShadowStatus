@@ -171303,9 +171303,16 @@
             "statusCode": 200,
             "timestamp": "2026-09-11T15:48:26.894Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 350,
+            "statusCode": 200,
+            "timestamp": "2026-09-11T16:30:20.956Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
