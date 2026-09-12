@@ -42642,9 +42642,16 @@
             "statusCode": 404,
             "timestamp": "2026-09-12T18:30:20.630Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-09-12T18:45:25.650Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
