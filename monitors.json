@@ -61,6 +61,14 @@
 					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": false,
 					"showHistory": false
+				},
+				{
+					"name": "Shadow Dev's Roblox Linking Bot & Dashboard",
+					"type": "http",
+					"target": "https://rbx.shadowdevs.com/",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"showHistory": false
 				}
 			]
 		},
