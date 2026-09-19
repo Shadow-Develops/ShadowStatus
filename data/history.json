@@ -190530,9 +190530,16 @@
             "statusCode": 200,
             "timestamp": "2026-09-19T01:15:17.041Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 305,
+            "statusCode": null,
+            "timestamp": "2026-09-19T02:00:20.799Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   }
