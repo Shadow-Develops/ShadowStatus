@@ -30,10 +30,11 @@
     {
       "id": 16,
       "title": "Shadow Systems DB Update",
-      "body": "<!-- monitors: Shadow Systems -->\n\nWe are currently doing a short update to our DB to increase security and encryption. We want to  ensure your data is safe and that it meets Discord's Developer Terms.",
+      "body": "<!-- monitors: Shadow Systems, https://shadowsys.app -->\n\nWe are currently doing a short update to our DB to increase security and encryption. We want to ensure your data is safe and that it meets Discord's Developer Terms.",
       "status": "maintenance",
       "monitors": [
-        "Shadow Systems"
+        "Shadow Systems",
+        "https://shadowsys.app"
       ],
       "groups": [],
       "isMaintenance": true,
@@ -42,7 +43,7 @@
       "scheduledStart": null,
       "scheduledEnd": null,
       "createdAt": "2026-09-19T22:43:02Z",
-      "updatedAt": "2026-09-19T22:43:02Z",
+      "updatedAt": "2026-09-19T22:48:29Z",
       "closedAt": null,
       "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/16",
       "updates": []
