@@ -30,10 +30,11 @@
     {
       "id": 16,
       "title": "Shadow Systems DB Update",
-      "body": "<!-- monitors: Shadow Systems -->\n\nWe are currently doing a short update to our DB to increase security and encryption. We want to  ensure your data is safe and that it meets Discord's Developer Terms.",
+      "body": "<!-- monitors: Shadow Systems, https://shadowsys.app -->\n\nWe are currently doing a short update to our DB to increase security and encryption. We want to ensure your data is safe and that it meets Discord's Developer Terms.",
       "status": "maintenance",
       "monitors": [
-        "Shadow Systems"
+        "Shadow Systems",
+        "https://shadowsys.app"
       ],
       "groups": [],
       "isMaintenance": true,
@@ -42,7 +43,7 @@
       "scheduledStart": null,
       "scheduledEnd": null,
       "createdAt": "2026-09-19T22:43:02Z",
-      "updatedAt": "2026-09-19T22:43:02Z",
+      "updatedAt": "2026-09-19T22:48:29Z",
       "closedAt": null,
       "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/16",
       "updates": []
@@ -66,9 +67,9 @@
           "showHistory": true,
           "timeout": 15000,
           "status": "operational",
-          "responseTime": 62,
+          "responseTime": 75,
           "statusCode": null,
-          "message": "TCP port 443 open (62ms)",
+          "message": "TCP port 443 open (75ms)",
           "incidentOverride": false,
           "daysRemaining": null,
           "history": [
@@ -907,7 +908,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 332,
+          "responseTime": 271,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -1748,11 +1749,11 @@
           ],
           "showTarget": true,
           "showHistory": true,
-          "status": "operational",
-          "responseTime": 263,
+          "status": "maintenance",
+          "responseTime": 339,
           "statusCode": 200,
           "message": "HTTP 200",
-          "incidentOverride": false,
+          "incidentOverride": true,
           "daysRemaining": null,
           "history": [
             {
@@ -2570,17 +2571,39 @@
             },
             {
               "day": "2026-09-19",
-              "status": "operational",
-              "checks": 20,
-              "avgResponseTime": 266.25,
+              "status": "maintenance",
+              "checks": 21,
+              "avgResponseTime": 269.7142857142857,
               "statusCounts": {
-                "operational": 20
+                "operational": 20,
+                "maintenance": 1
               }
             }
           ],
-          "uptime": 99.23,
-          "incidentStatus": null,
-          "affectingIncidents": []
+          "uptime": 99.18,
+          "incidentStatus": "maintenance",
+          "affectingIncidents": [
+            {
+              "id": 16,
+              "title": "Shadow Systems DB Update",
+              "body": "<!-- monitors: Shadow Systems -->\n\nWe are currently doing a short update to our DB to increase security and encryption. We want to  ensure your data is safe and that it meets Discord's Developer Terms.",
+              "status": "maintenance",
+              "monitors": [
+                "Shadow Systems"
+              ],
+              "groups": [],
+              "isMaintenance": true,
+              "isResolved": false,
+              "isUpcoming": false,
+              "scheduledStart": null,
+              "scheduledEnd": null,
+              "createdAt": "2026-09-19T22:43:02Z",
+              "updatedAt": "2026-09-19T22:43:02Z",
+              "closedAt": null,
+              "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/16",
+              "updates": []
+            }
+          ]
         }
       ]
     },
@@ -3432,7 +3455,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 257,
+          "responseTime": 255,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3453,7 +3476,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 324,
+          "responseTime": 360,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3474,7 +3497,7 @@
           "showTarget": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 328,
+          "responseTime": 373,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3495,7 +3518,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 363,
+          "responseTime": 385,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3527,7 +3550,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 368,
+          "responseTime": 478,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3546,7 +3569,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 468,
+          "responseTime": 514,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3568,7 +3591,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 439,
+          "responseTime": 492,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3590,7 +3613,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 445,
+          "responseTime": 523,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3612,7 +3635,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 569,
+          "responseTime": 655,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3640,7 +3663,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 408,
+          "responseTime": 462,
           "statusCode": 200,
           "message": "Minor Service Outage",
           "incidentOverride": false,
@@ -3657,7 +3680,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 397,
+          "responseTime": 563,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3674,7 +3697,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 401,
+          "responseTime": 436,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3686,5 +3709,5 @@
     }
   ],
   "announcements": [],
-  "lastUpdated": "2026-09-19T22:30:20.887Z"
+  "lastUpdated": "2026-09-19T22:45:18.859Z"
 }
