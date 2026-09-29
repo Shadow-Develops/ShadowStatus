@@ -141986,9 +141986,16 @@
             "statusCode": 200,
             "timestamp": "2026-09-29T17:00:24.406Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-09-29T17:30:28.481Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
