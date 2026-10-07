@@ -70902,9 +70902,16 @@
             "statusCode": 200,
             "timestamp": "2026-10-07T12:45:20.686Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 263,
+            "statusCode": 503,
+            "timestamp": "2026-10-07T13:15:20.307Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
