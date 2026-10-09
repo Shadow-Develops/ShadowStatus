@@ -85333,9 +85333,16 @@
             "statusCode": 200,
             "timestamp": "2026-10-09T19:15:17.704Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 298,
+            "statusCode": 502,
+            "timestamp": "2026-10-09T20:15:15.934Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
