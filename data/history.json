@@ -28169,9 +28169,16 @@
             "statusCode": 200,
             "timestamp": "2026-10-18T01:15:17.263Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10000,
+            "statusCode": null,
+            "timestamp": "2026-10-18T01:30:29.438Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -112788,9 +112795,16 @@
             "statusCode": 404,
             "timestamp": "2026-10-18T01:15:17.263Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 10001,
+            "statusCode": null,
+            "timestamp": "2026-10-18T01:30:29.438Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
@@ -141006,9 +141020,16 @@
             "statusCode": 200,
             "timestamp": "2026-10-18T01:15:17.263Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 9999,
+            "statusCode": null,
+            "timestamp": "2026-10-18T01:30:29.438Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
