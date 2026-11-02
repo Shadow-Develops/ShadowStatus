@@ -165950,9 +165950,16 @@
             "statusCode": 200,
             "timestamp": "2026-11-02T03:15:20.508Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 349,
+            "statusCode": null,
+            "timestamp": "2026-11-02T03:45:15.520Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
