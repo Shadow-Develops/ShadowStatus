@@ -178320,9 +178320,16 @@
             "statusCode": 200,
             "timestamp": "2026-11-10T15:15:20.667Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 494,
+            "statusCode": 200,
+            "timestamp": "2026-11-10T16:15:15.886Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
