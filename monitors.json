@@ -69,6 +69,14 @@
 					"expectedStatus": [200, 404, 401, 303],
 					"showTarget": true,
 					"showHistory": false
+				},
+				{
+					"name": "Karaoke Core",
+					"type": "http",
+					"target": "https://karaokecore.com/",
+					"expectedStatus": [200, 404, 401, 303],
+					"showTarget": true,
+					"showHistory": false
 				}
 			]
 		},
