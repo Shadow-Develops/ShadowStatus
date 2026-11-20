@@ -79,15 +79,6 @@
 			"showGroupHistory": false,
 			"monitors": [
 				{
-					"name": "karaokecore.com",
-					"type": "http",
-					"target": "https://karaokecore.com",
-					"expectedStatus": [200, 404, 401, 303],
-					"showTarget": true,
-					"applyToOverall": true,
-					"showHistory": true
-				},
-				{
 					"name": "agentbub.dev & zachhines.dev",
 					"type": "http",
 					"target": "https://agentbub.dev",
