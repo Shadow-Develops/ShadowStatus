@@ -14011,6 +14011,13 @@
             "statusCode": null,
             "timestamp": "2026-11-20T00:00:20.433Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 66,
+            "statusCode": null,
+            "timestamp": "2026-11-20T01:15:31.736Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "operational"
@@ -28056,6 +28063,13 @@
             "responseTime": 190,
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.433Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 260,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.736Z",
             "incidentOverride": false
           }
         ],
@@ -42110,6 +42124,13 @@
             "statusCode": 404,
             "timestamp": "2026-11-20T00:00:20.433Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 315,
+            "statusCode": 404,
+            "timestamp": "2026-11-20T01:15:31.736Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "operational"
@@ -56149,6 +56170,13 @@
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.433Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 274,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.736Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "operational"
@@ -70173,6 +70201,13 @@
             "responseTime": 198,
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.433Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 229,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.736Z",
             "incidentOverride": false
           }
         ],
@@ -84213,6 +84248,13 @@
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.433Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 306,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.736Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "operational"
@@ -98244,6 +98286,13 @@
             "responseTime": 316,
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.433Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 391,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.737Z",
             "incidentOverride": false
           }
         ],
@@ -112283,6 +112332,13 @@
             "responseTime": 333,
             "statusCode": 404,
             "timestamp": "2026-11-20T00:00:20.433Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 393,
+            "statusCode": 404,
+            "timestamp": "2026-11-20T01:15:31.737Z",
             "incidentOverride": false
           }
         ],
@@ -145459,6 +145515,13 @@
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.434Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 333,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.737Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "degraded"
@@ -159511,6 +159574,13 @@
             "responseTime": 325,
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.434Z",
+            "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 377,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.737Z",
             "incidentOverride": false
           }
         ],
@@ -173838,6 +173908,13 @@
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.434Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 299,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.737Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "operational"
@@ -187891,6 +187968,13 @@
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.434Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 493,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.737Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "operational"
@@ -198184,9 +198268,32 @@
             "statusCode": 200,
             "timestamp": "2026-11-20T00:00:20.433Z",
             "incidentOverride": false
+          },
+          {
+            "status": "operational",
+            "responseTime": 338,
+            "statusCode": 200,
+            "timestamp": "2026-11-20T01:15:31.737Z",
+            "incidentOverride": false
           }
         ],
         "worstStatus": "operational"
+      }
+    }
+  },
+  "karaokecore.com": {
+    "days": {
+      "2026-11-20": {
+        "checks": [
+          {
+            "status": "degraded",
+            "responseTime": 418,
+            "statusCode": 500,
+            "timestamp": "2026-11-20T01:15:31.737Z",
+            "incidentOverride": false
+          }
+        ],
+        "worstStatus": "degraded"
       }
     }
   }
