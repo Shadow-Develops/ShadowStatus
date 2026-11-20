@@ -28,6 +28,28 @@
       ]
     },
     {
+      "id": 17,
+      "title": "Database Updates",
+      "body": "<!-- groups: Primary Systems, Secondary Systems, Hosted by Us -->\n\nWe are doing some routine updates to our database and it's replication states. We are just ensuring things will continue to run smoothly and some of our future projects will be able to run smoothly due to their specific database replication requirements.\n\nNo data loss or issues should arise, and application downtime should be minimal.",
+      "status": "maintenance",
+      "monitors": [],
+      "groups": [
+        "Primary Systems",
+        "Secondary Systems",
+        "Hosted by Us"
+      ],
+      "isMaintenance": true,
+      "isResolved": false,
+      "isUpcoming": false,
+      "scheduledStart": null,
+      "scheduledEnd": null,
+      "createdAt": "2026-11-20T15:41:49Z",
+      "updatedAt": "2026-11-20T15:41:49Z",
+      "closedAt": null,
+      "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/17",
+      "updates": []
+    },
+    {
       "id": 16,
       "title": "Shadow Systems DB Update",
       "body": "<!-- monitors: Shadow Systems, https://shadowsys.app -->\n\nWe are currently doing a short update to our DB to increase security and encryption. We want to ensure your data is safe and that it meets Discord's Developer Terms.",
