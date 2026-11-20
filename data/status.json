@@ -898,10 +898,10 @@
             {
               "day": "2026-11-20",
               "status": "operational",
-              "checks": 3,
-              "avgResponseTime": 45.666666666666664,
+              "checks": 4,
+              "avgResponseTime": 45,
               "statusCounts": {
-                "operational": 3
+                "operational": 4
               }
             }
           ],
@@ -922,7 +922,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 157,
+          "responseTime": 190,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -1738,10 +1738,10 @@
             {
               "day": "2026-11-20",
               "status": "operational",
-              "checks": 3,
-              "avgResponseTime": 199.33333333333334,
+              "checks": 4,
+              "avgResponseTime": 197,
               "statusCounts": {
-                "operational": 3
+                "operational": 4
               }
             }
           ],
@@ -1762,7 +1762,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 240,
+          "responseTime": 260,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -2579,10 +2579,10 @@
             {
               "day": "2026-11-20",
               "status": "operational",
-              "checks": 3,
-              "avgResponseTime": 224.33333333333334,
+              "checks": 4,
+              "avgResponseTime": 233.25,
               "statusCounts": {
-                "operational": 3
+                "operational": 4
               }
             }
           ],
@@ -3418,10 +3418,10 @@
         {
           "day": "2026-11-20",
           "status": "operational",
-          "checks": 12,
-          "avgResponseTime": 231.66666666666666,
+          "checks": 16,
+          "avgResponseTime": 246.375,
           "statusCounts": {
-            "operational": 12
+            "operational": 16
           }
         }
       ],
@@ -3440,7 +3440,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 150,
+          "responseTime": 223,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3461,7 +3461,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 239,
+          "responseTime": 287,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3482,7 +3482,7 @@
           "showTarget": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 277,
+          "responseTime": 318,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3503,7 +3503,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 286,
+          "responseTime": 334,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3522,574 +3522,6 @@
       "uptime": null,
       "monitors": [
         {
-          "name": "karaokecore.com",
-          "type": "http",
-          "target": "https://karaokecore.com",
-          "expectedStatus": [
-            200,
-            404,
-            401,
-            303
-          ],
-          "showTarget": true,
-          "applyToOverall": true,
-          "showHistory": true,
-          "status": "degraded",
-          "responseTime": 305,
-          "statusCode": 500,
-          "message": "Expected 200/404/401/303, got 500",
-          "incidentOverride": false,
-          "daysRemaining": null,
-          "history": [
-            {
-              "day": "2026-08-23",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-24",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-25",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-26",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-27",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-28",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-29",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-30",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-08-31",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-01",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-02",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-03",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-04",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-05",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-06",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-07",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-08",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-09",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-10",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-12",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-13",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-14",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-15",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-16",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-17",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-18",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-19",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-20",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-21",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-22",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-23",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-24",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-25",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-26",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-27",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-28",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-29",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-09-30",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-01",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-02",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-03",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-04",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-05",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-06",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-07",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-08",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-09",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-10",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-12",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-13",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-14",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-15",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-16",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-17",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-18",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-19",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-20",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-21",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-22",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-23",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-24",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-25",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-26",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-27",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-28",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-29",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-30",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-10-31",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-01",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-02",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-03",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-04",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-05",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-06",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-07",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-08",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-09",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-10",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-11",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-12",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-13",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-14",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-15",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-16",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-17",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-18",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-19",
-              "status": null,
-              "checks": 0,
-              "avgResponseTime": null
-            },
-            {
-              "day": "2026-11-20",
-              "status": "degraded",
-              "checks": 2,
-              "avgResponseTime": 310.5,
-              "statusCounts": {
-                "degraded": 2
-              }
-            }
-          ],
-          "uptime": 0,
-          "incidentStatus": null,
-          "affectingIncidents": []
-        },
-        {
           "name": "agentbub.dev & zachhines.dev",
           "type": "http",
           "target": "https://agentbub.dev",
@@ -4103,7 +3535,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 341,
+          "responseTime": 425,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -4122,7 +3554,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 430,
+          "responseTime": 376,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -4144,7 +3576,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 374,
+          "responseTime": 445,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -4172,7 +3604,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 407,
+          "responseTime": 373,
           "statusCode": 200,
           "message": "Partially Degraded Service",
           "incidentOverride": false,
@@ -4189,7 +3621,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 421,
+          "responseTime": 387,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -4206,7 +3638,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 438,
+          "responseTime": 376,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -4218,5 +3650,5 @@
     }
   ],
   "announcements": [],
-  "lastUpdated": "2026-11-20T03:30:18.400Z"
+  "lastUpdated": "2026-11-20T04:00:20.550Z"
 }
