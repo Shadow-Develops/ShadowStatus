@@ -16,16 +16,7 @@
       "updatedAt": "2026-02-26T03:11:13Z",
       "closedAt": "2026-02-26T02:21:47Z",
       "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/14",
-      "updates": [
-        {
-          "id": 3963701077,
-          "body": "I have found the issue causing the ratelimit problem, and have resolved it. All bot's are now back online and operating as normal!\nThe problem causing this issue will also be rectified so that it doesn't happen again! Again, I do apologize for any inconvenience.",
-          "createdAt": "2026-02-26T03:11:13Z",
-          "updatedAt": "2026-02-26T03:11:13Z",
-          "author": "AgentBUB",
-          "authorAvatar": "https://avatars.githubusercontent.com/u/46576969?v=4"
-        }
-      ]
+      "updates": []
     },
     {
       "id": 17,
@@ -47,16 +38,7 @@
       "updatedAt": "2026-11-20T16:00:49Z",
       "closedAt": "2026-11-20T16:00:49Z",
       "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/17",
-      "updates": [
-        {
-          "id": 7044167467,
-          "body": "Databases have been verified and are working.",
-          "createdAt": "2026-11-20T16:00:49Z",
-          "updatedAt": "2026-11-20T16:00:49Z",
-          "author": "AgentBUB",
-          "authorAvatar": "https://avatars.githubusercontent.com/u/46576969?v=4"
-        }
-      ]
+      "updates": []
     },
     {
       "id": 16,
@@ -77,24 +59,7 @@
       "updatedAt": "2026-09-19T23:42:58Z",
       "closedAt": "2026-09-19T23:42:58Z",
       "url": "https://github.com/Shadow-Develops/ShadowStatus/issues/16",
-      "updates": [
-        {
-          "id": 5746022908,
-          "body": "We are verifying data, as we noticed a few missing parts. We will double check before full release, as we don't want any data loss.",
-          "createdAt": "2026-09-19T23:12:21Z",
-          "updatedAt": "2026-09-19T23:12:21Z",
-          "author": "AgentBUB",
-          "authorAvatar": "https://avatars.githubusercontent.com/u/46576969?v=4"
-        },
-        {
-          "id": 5746180959,
-          "body": "All data has been verified as intact and new encryption is setup.",
-          "createdAt": "2026-09-19T23:42:58Z",
-          "updatedAt": "2026-09-19T23:42:58Z",
-          "author": "AgentBUB",
-          "authorAvatar": "https://avatars.githubusercontent.com/u/46576969?v=4"
-        }
-      ]
+      "updates": []
     }
   ],
   "monitors": [],
@@ -115,9 +80,9 @@
           "showHistory": true,
           "timeout": 15000,
           "status": "operational",
-          "responseTime": 32,
+          "responseTime": 70,
           "statusCode": null,
-          "message": "TCP port 443 open (32ms)",
+          "message": "TCP port 443 open (70ms)",
           "incidentOverride": false,
           "daysRemaining": null,
           "history": [
@@ -929,10 +894,10 @@
             {
               "day": "2026-11-27",
               "status": "operational",
-              "checks": 16,
-              "avgResponseTime": 57.375,
+              "checks": 17,
+              "avgResponseTime": 58.11764705882353,
               "statusCounts": {
-                "operational": 16
+                "operational": 17
               }
             }
           ],
@@ -953,7 +918,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 170,
+          "responseTime": 258,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -1770,10 +1735,10 @@
             {
               "day": "2026-11-27",
               "status": "operational",
-              "checks": 16,
-              "avgResponseTime": 241.3125,
+              "checks": 17,
+              "avgResponseTime": 242.2941176470588,
               "statusCounts": {
-                "operational": 16
+                "operational": 17
               }
             }
           ],
@@ -1794,7 +1759,7 @@
           "showTarget": true,
           "showHistory": true,
           "status": "operational",
-          "responseTime": 141,
+          "responseTime": 259,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -2611,10 +2576,10 @@
             {
               "day": "2026-11-27",
               "status": "operational",
-              "checks": 16,
-              "avgResponseTime": 234.5,
+              "checks": 17,
+              "avgResponseTime": 235.94117647058823,
               "statusCounts": {
-                "operational": 16
+                "operational": 17
               }
             }
           ],
@@ -3450,10 +3415,10 @@
         {
           "day": "2026-11-27",
           "status": "degraded",
-          "checks": 81,
-          "avgResponseTime": 301.2098765432099,
+          "checks": 86,
+          "avgResponseTime": 302.98837209302326,
           "statusCounts": {
-            "operational": 80,
+            "operational": 85,
             "degraded": 1
           }
         }
@@ -3473,7 +3438,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 184,
+          "responseTime": 283,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3494,7 +3459,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 207,
+          "responseTime": 288,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3515,7 +3480,7 @@
           "showTarget": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 277,
+          "responseTime": 326,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3536,7 +3501,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 271,
+          "responseTime": 377,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3557,7 +3522,7 @@
           "showTarget": true,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 276,
+          "responseTime": 385,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3589,7 +3554,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 358,
+          "responseTime": 474,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3608,7 +3573,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 392,
+          "responseTime": 428,
           "statusCode": 404,
           "message": "HTTP 404",
           "incidentOverride": false,
@@ -3630,7 +3595,7 @@
           "applyToOverall": false,
           "showHistory": false,
           "status": "operational",
-          "responseTime": 385,
+          "responseTime": 478,
           "statusCode": 200,
           "message": "HTTP 200",
           "incidentOverride": false,
@@ -3658,7 +3623,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "degraded",
-          "responseTime": 290,
+          "responseTime": 450,
           "statusCode": 200,
           "message": "Partially Degraded Service",
           "incidentOverride": false,
@@ -3675,7 +3640,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 325,
+          "responseTime": 470,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3692,7 +3657,7 @@
           "applyToOverall": false,
           "notify": false,
           "status": "operational",
-          "responseTime": 342,
+          "responseTime": 492,
           "statusCode": 200,
           "message": "All Systems Operational",
           "incidentOverride": false,
@@ -3704,5 +3669,5 @@
     }
   ],
   "announcements": [],
-  "lastUpdated": "2026-11-27T18:30:20.000Z"
+  "lastUpdated": "2026-11-27T18:45:21.381Z"
 }
