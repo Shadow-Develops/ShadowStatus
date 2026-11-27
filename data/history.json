@@ -70580,9 +70580,16 @@
             "statusCode": 200,
             "timestamp": "2026-11-27T13:45:33.207Z",
             "incidentOverride": false
+          },
+          {
+            "status": "degraded",
+            "responseTime": 130,
+            "statusCode": 503,
+            "timestamp": "2026-11-27T14:45:17.999Z",
+            "incidentOverride": false
           }
         ],
-        "worstStatus": "operational"
+        "worstStatus": "degraded"
       }
     }
   },
